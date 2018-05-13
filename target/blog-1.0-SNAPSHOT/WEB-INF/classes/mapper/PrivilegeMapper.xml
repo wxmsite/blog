@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.Mapper.PrivilegeMapper">
+
+    <insert id="addPrivilege" parameterType="UserPrivilege">
+        insert into privilege(id,privilege) values (#{id},#{privilege})
+    </insert>
+    <update id="updatePrivilege" parameterType="UserPrivilege">
+        update privilege set privilege=#{privilege} where id=#{id}
+    </update>
+</mapper>

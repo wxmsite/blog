@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.Mapper.ExpertBlogMapper">
+    <insert id="insertUrl" parameterType="ExpertUrl">
+        insert into expert(avatar_url,blog_url,name,place,work,articleNum,readNum)
+        values(#{avatarUrl},#{blogUrl},#{name},#{place},#{work},#{articleNum},#{readNum})
+    </insert>
+
+<delete id="deleteUrl" parameterType="String">
+    delete from expert where blog_url=#{blogUrl}
+</delete>
+    <insert id="insertBlog" parameterType="ExpertBlog">
+        insert  into expertBlog(uid,blog_url,title,content,date,read_num,comment_num)
+        values(#{uid},#{blogUrl},#{title},#{content},#{date},#{readNum},#{commentNum})
+    </insert>
+    <delete id="deleteBlog" parameterType="int">
+        delete from expertBlog where id=#{id}
+    </delete>
+</mapper>
