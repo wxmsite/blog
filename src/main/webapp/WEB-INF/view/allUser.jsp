@@ -1,11 +1,14 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+    String path = request.getContextPath();
 
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
-    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${path}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${path}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 
     <title>用户列表</title>
 </head>
@@ -87,7 +90,7 @@
         <!-- 分页条 -->
         <div class="col-md-6">
             <nav aria-label="Page navigation">
-                <ul class="pagination">
+                <ul class="pagination" style="margin-left: 5px">
                     <li><a href="${path}/user/userInfo?pn=1">首页</a></li>
                     <c:if test="${pageInfo.hasPreviousPage }">
                         <li>

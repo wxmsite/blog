@@ -1,7 +1,7 @@
 package com.blog.service.impl;
 
 import com.blog.Mapper.BlogMapper;
-import com.blog.model.blog;
+import com.blog.model.BlogUrl;
 import com.blog.service.BlogService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,23 +17,20 @@ public class BlogServiceImpl implements BlogService {
     BlogMapper blogMapper;
 
     @Override
-    public List<blog> findAllblog() {
+    public List<BlogUrl> findAllblog() {
         return blogMapper.findAllblog();
     }
 
     @Override
-    public List<blog> findblogByClass(String className) {
+    public List<BlogUrl> findblogByClass(String className) {
         return blogMapper.findblogByClass(className);
     }
 
     @Override
-    public List<blog> findblogByTag(int tid) {
+    public List<BlogUrl> findblogByTag(int tid) {
         return blogMapper.findblogByTag(tid);
     }
 
-    @Override
-    public boolean addArticle(blog blog) {
-        return blogMapper.addArticle(blog);
-    }
+
 }
 

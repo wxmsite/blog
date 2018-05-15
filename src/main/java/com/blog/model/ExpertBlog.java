@@ -3,10 +3,8 @@ package com.blog.model;
 import java.sql.Date;
 
 public class ExpertBlog {
-
     private int uid;
     private String blogUrl;
-
 
     private String title;
     private String content;

@@ -20,7 +20,7 @@
     <title>Hello</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
         <div class="col-md-4 col-md-offset-4">
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Please Sign up</h3>
+                    <h3 class="panel-title">Please Sign in</h3>
                 </div>
                 <div class="panel-body">
                     <form role="form" id="loginform">
@@ -51,9 +51,14 @@
                                     <input name="remember" type="checkbox" value="Remember Me">Remember Me
                                 </label>
                             </div>
-                            <input type="button" value="登录" class="btn btn-lg btn-success btn-block" onclick="login()">
+                            <input type="button" value="Sign in" class="btn btn-lg btn-success btn-block" onclick="login()">
                         </fieldset>
+
                     </form>
+                    <p class="mt-3">
+                        New to here?
+                        <a  href="/Person/register">Create an account</a>.
+                    </p>
                 </div>
             </div>
         </div>
@@ -84,9 +89,5 @@
         }
     }
 </script>
-
-
 </body>
-
-
 </html>

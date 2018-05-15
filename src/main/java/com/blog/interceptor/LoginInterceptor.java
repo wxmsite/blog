@@ -32,9 +32,12 @@ public class LoginInterceptor implements HandlerInterceptor {
             String loginStatus= (String) map.get("login");
             Long timestamp= (Long) map.get("timestamp");
             if (loginStatus!=null&&timestamp!=null&&new Date().getTime()-timestamp<1000*60*60*24){
+                System.out.println("登录"+true);
                 return true;
+
             }
         }
+        System.out.println("登录"+false);
         //没有发现cookie返回登录页面，返回false不执行controller的方法
         response.sendRedirect("/Person/loginPage");
         return false;

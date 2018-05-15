@@ -27,6 +27,7 @@ public class PersonController {
     @Autowired
     UserInfoService userInfoService;
 
+
     /**
      * 加载后台管理界面
      * 会被LoginInterceptor拦截

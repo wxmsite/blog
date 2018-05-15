@@ -33,10 +33,7 @@
             <!--拦截后台页面的请求-->
             <mvc:mapping path="/Person/user"/>
             <mvc:mapping path="/user/**"/>
-
-
            <!-- <mvc:exclude-mapping path="/backend/loginPage"/>-->
-
             <!--<bean class="com.fuzhu.Interceptor.Myinterceptor"></bean>-->
             <bean class="com.blog.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>

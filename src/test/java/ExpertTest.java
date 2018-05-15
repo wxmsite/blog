@@ -20,12 +20,8 @@ public class ExpertTest {
     public void expertUrlTest() {
         ExpertUrl expertUrl = new ExpertUrl("1", "2", "3", "4", "5", 6, 7);
         expertBlogService.insertUrl(expertUrl);
-
         expertBlogService.deleteUrl("2");
-
-
     }
-
     @Test
     public void expertBlogTest() {
         ExpertBlog expertBlog = new ExpertBlog( 2, "2", "3", "4", new Date(111111), 100, 200);
