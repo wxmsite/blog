@@ -14,6 +14,10 @@ import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
 import us.codecraft.webmagic.selector.Selectable;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring/applicationContext.xml")
@@ -23,6 +27,8 @@ public class ExpertSpider implements PageProcessor {
     private static ExpertBlogService expertBlogService;
     private static ExpertBlogMapper expertBlogMapper;
     ExpertUrl expertUrl;
+    Map<String, Boolean> map = new ConcurrentHashMap<>();
+    private final static ThreadLocal<ExpertUrl>blog=new ThreadLocal<>();
 
     //When you use @Autowired in a new thread,you will get a nullpointerException
     static {
@@ -47,40 +53,40 @@ public class ExpertSpider implements PageProcessor {
         String work = null;
         String place = null;
 
+
         // 列表页： 这里进行匹配，匹配出列表页进行相关处理。
         if ((page.getUrl()).regex(EXPERTS_LIST).match()) {
             // 遍历出div[@class=\"page_nav\"]节点下的所有超链接，这里的超链接是分页的超链接，可以进行分页。
-            page.addTargetRequests(
-                    page.getHtml().xpath("//div[@class=\"page_nav\"]").links().regex(EXPERTS_LIST).all());// 是一个正则规则，校验使用，可以省略。
+            page.addTargetRequests(page.getHtml().xpath("//div[@class=\"page_nav\"]").links().regex(EXPERTS_LIST).all());// 是一个正则规则，校验使用，可以省略。
 
             // 获取专家列表元素
             //使用Selectable以进行页面元素的链式抽取
             Selectable selectable = page.getHtml().xpath("//dl[@class=\"experts_list\"]");
             //根据xpath来获取相关信息
             for (Selectable s : selectable.nodes()) {
-
+                //获得博客url和头像url
                 String url = s.xpath("//a[@class=\"expert_name\"]").links().toString();
                 String avatarUrl = s.xpath("//img[@class=\"expert_head\"]/@src").toString();
-
+                //获得博主名字
                 String name = s.xpath("//a[@class=\"expert_name\"]/text()").toString();
-
+                //获得博主工作地点和工作
                 place = s.xpath("//div[@class=\"address\"]//em/tidyText()").toString();
                 work = s.xpath("//div[@class=\"address\"]//span/tidyText()").toString();
-
+                //获得阅读量和原创文章数
                 String articleNum = s.xpath("//div[@class=\"count_l fl\"]//b/tidyText()").toString();
                 String readNum = s.xpath("//div[@class=\"count_l fr\"]//b/tidyText()").toString();
-                // 开始组装数据
-                if (place == null) {
-                    work = null;
+               /* if(!map.containsKey(url)){
+                    map.put(url,true);
+                }
+                else {
+                    System.out.println(url+"error");
+                }*/
 
-                }
-                try {
-                    expertUrl = new ExpertUrl(avatarUrl, url, name, place, work, Integer.valueOf(readNum), Integer.valueOf(articleNum));
-                    expertBlogService.insertUrl(expertUrl);
-                } catch (Exception e) {
-                    System.out.println(expertUrl.toString());
-                    e.printStackTrace();
-                }
+                 blog.set(new ExpertUrl(avatarUrl,url,name,place,work,Integer.parseInt(articleNum),Integer.parseInt(readNum)));
+                 expertBlogService.insertUrl(blog.get());
+
+
+
             }
         }
     }
@@ -93,8 +99,8 @@ public class ExpertSpider implements PageProcessor {
     @Test
     public void insertTest() {
         Spider.create(new ExpertSpider()).addUrl("http://blog.csdn.net/peoplelist.html?channelid=0&page=1").thread(5).run();
-    }
 
+    }
 
 
 }

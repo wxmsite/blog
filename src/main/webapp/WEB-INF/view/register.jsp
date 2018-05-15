@@ -18,7 +18,7 @@
     <title>Hello</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -40,17 +40,20 @@
                     <form role="form">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="用户名" name="username" type="text" autofocus>
+                                <input class="form-control" placeholder="Pick a username" name="username" type="text" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="密码" name="password" type="password" value="">
+                                <input class="form-control" placeholder="Create a password" name="password" type="password" value="">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="can be empty" name="email" type="email" value="">
                             </div>
                             <div class="checkbox">
                                 <label>
                                     <input name="remember" type="checkbox" value="Remember Me">Remember Me
                                 </label>
                             </div>
-                            <input type="button" value="注册" class="btn btn-lg btn-success btn-block"
+                            <input type="button" value="sign up" class="btn btn-lg btn-success btn-block"
                                    onclick="register()">
                         </fieldset>
                     </form>

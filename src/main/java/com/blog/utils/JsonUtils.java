@@ -11,9 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 
-/**
- * 淘淘商城自定义响应结构
- */
+
 public class JsonUtils {
 
     private static final SerializeConfig config;

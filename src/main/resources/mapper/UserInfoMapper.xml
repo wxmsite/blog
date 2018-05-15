@@ -16,9 +16,9 @@
     <select id="getId" resultType="int">
         select user_id from user where user_name=#{username}
     </select>
-    <!-- 新增 -->
+    <!-- 新增用户-->
     <insert id="addUser" parameterType="UserInfo"  >
-        insert into user(user_name,user_password,user_created) values (#{username},#{password},#{created})
+        insert into user(user_name,user_password,user_created) values (#{username},#{password},#{email},#{created})
     </insert>
 
     <!-- 修改 -->

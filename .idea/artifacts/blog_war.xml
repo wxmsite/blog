@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="blog:war">
+  <artifact type="war" name="blog:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="blog-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="blog:war exploded" />

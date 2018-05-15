@@ -1,12 +1,14 @@
 package com.blog.service;
 
-import com.blog.model.blog;
+import com.blog.model.BlogUrl;
+
 
 import java.util.List;
 
 public interface BlogService {
-    List<blog> findAllblog();
-    List<blog> findblogByClass(String className);
-    List<blog> findblogByTag(int tid);
-    boolean addArticle(blog blog);
+    List<BlogUrl> findAllblog();
+    List<BlogUrl> findblogByClass(String className);
+    List<BlogUrl> findblogByTag(int tid);
+
+
 }

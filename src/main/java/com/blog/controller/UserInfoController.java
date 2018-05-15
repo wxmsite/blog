@@ -28,7 +28,7 @@ public class UserInfoController {
      * 跳转到添加用户界面
      * @return
      */
-    @RequestMapping("toAddUser")
+    @RequestMapping("/toAddUser")
     public String toAddUser(){
         return "addUser";
     }
@@ -39,7 +39,7 @@ public class UserInfoController {
      * @param userInfo
      * @return
      */
-    @RequestMapping("addUser")
+    @RequestMapping("/addUser")
     public String addUser(Model model, UserInfo userInfo){
 
         UserInfo user=userInfoService.getUserByName(userInfo.getUsername());
@@ -127,9 +127,6 @@ public class UserInfoController {
         model.addAttribute("pageInfo", page);
         return "allUser";
     }
-    @RequestMapping("register")
-    public String register (Model model){
-        return "register";
-    }
+
 
 }

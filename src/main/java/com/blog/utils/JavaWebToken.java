@@ -17,7 +17,7 @@ public class JavaWebToken {
     private static Key getKeyInstance() {
 
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
-        byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary("Blog");
+        byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary("blog");
         Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
         return signingKey;
     }

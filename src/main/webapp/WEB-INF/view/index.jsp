@@ -9,13 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>blog Home - Start Bootstrap Template</title>
-    <%-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">--%>
+
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
-    <link href="${pageContext.request.contextPath}/css/blog-home.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/github.css" rel="stylesheet">
+    <link href="/css/blog-home.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/github.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
+   <style type="text/css">
+       .row-click-able { cursor: pointer; }
+   </style>
 </head>
 
 <body>
@@ -44,12 +49,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
-                <li class="nav-item" id="Sign">
+                <li class="nav-item" id="sign">
                     <svg height="36" class=" nav-link octicon octicon-mark-github " version="1.1"
                          width="36"
                          viewBox="0 0 16 16"
                          aria-hidden="true"
-                         href="javasrcipt:void(0)" onclick="init()">
+                         href="javasrcipt:void(0)" onclick="init()" id="signSvg">
                         <path fill-rule="evenodd"
                               d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
                     </svg>
@@ -66,68 +71,75 @@
     <div class="row">
         <!-- blog Entries Column -->
         <div class="col-md-8">
-            <h1 class="my-4">Page Heading
-                <small>Secondary Text</small>
-            </h1>
 
-            <!-- blog Post -->
-            <div class="card mb-4">
 
-                <div class="card-body">
-                    <h2 class="card-title">Post Title</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
-                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
-                        voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Posted on January 1, 2017 by
-                    <a href="#">Start Bootstrap</a>
-                </div>
-            </div>
-
-            <!-- blog Post -->
-            <div class="card mb-4">
-
-                <div class="card-body">
-                    <h2 class="card-title">Post Title</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
-                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
-                        voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Posted on January 1, 2017 by
-                    <a href="#">Start Bootstrap</a>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-hover">
+                        <tbody>
+                        <c:forEach items="${allBlog.list }" var="allBlog">
+                            <tr class="row-click-able" data-href="${allBlog.blogUrl}">
+                                <td>${allBlog.name}</td>
+                                <td>${allBlog.place }</td>
+                                <td>${allBlog.work }</td>
+                                <td>${allBlog.readNum}</td>
+                                <td>${allBlog.articleNum}</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <!-- blog Post -->
-            <div class="card mb-4">
+            <hr style="height:1px;border:none;border-top:1px solid #ccc;"/>
+            <!-- 分页导航栏 -->
 
-                <div class="card-body">
-                    <h2 class="card-title">Post Title</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
-                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
-                        voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <!-- 分页信息 -->
+            <div class="row">
+                <!-- 分页文字信息，其中分页信息都封装在allBlog中 -->
+                <div class="col-md-6">
+                    当前第：${allBlog.pageNum}页，总共：${allBlog.pages}页，总共：${allBlog.total}条记录
                 </div>
-                <div class="card-footer text-muted">
-                    Posted on January 1, 2017 by
-                    <a href="#">Start Bootstrap</a>
+
+                <!-- 分页条 -->
+                <div class="col-md-6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li style="margin-left: 20px"><a href="${path}/?pn=1">首页</a></li>
+
+                            <c:if test="${allBlog.hasPreviousPage }">
+                                <li>
+                                    <a style="margin-left: 20px" href="${path}/?pn=${allBlog.pageNum-1}"
+                                       aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            </c:if>
+
+                            <c:forEach items="${allBlog.navigatepageNums }" var="page_Num">
+                                <c:if test="${page_Num == allBlog.pageNum }">
+                                    <li style="margin-left: 20px" class="active"><a
+                                            href="${path}/?pn=${ page_Num}">${ page_Num}</a></li>
+                                </c:if>
+                                <c:if test="${page_Num != allBlog.pageNum }">
+                                    <li><a style="margin-left: 20px" href="${path}/?pn=${ page_Num}">${ page_Num}</a>
+                                    </li>
+                                </c:if>
+                            </c:forEach>
+                            <c:if test="${allBlog.hasNextPage }">
+                                <li>
+                                    <a style="margin-left: 20px" href="${path}/?pn=${allBlog.pageNum+1}"
+                                       aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </c:if>
+
+                            <li style="margin-left: 20px"><a href="${path}/?pn=${allBlog.pages}">末页</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-
-            <!-- Pagination -->
-            <ul class="pagination justify-content-center mb-4">
-                <li class="page-item">
-                    <a class="page-link" href="#">&larr; Older</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">Newer &rarr;</a>
-                </li>
-            </ul>
-
         </div>
 
         <!-- Sidebar Widgets Column -->
@@ -229,14 +241,26 @@
     </div>
     <!-- /.container -->
 </footer>
+
 <script type="text/javascript">
+    $(document).ready(function ($) {
+        $(".row-click-able").click(function () {
+            window.document.location = $(this).data("href");
+        });
+    });
+
+
     function init() {
-        window.location.href="/Person/user"  ;
+        window.location.href = "/Person/user";
+    }
+
+    function openBlog(url) {
+        alert(true);
+        window.open(url);
+
     }
 </script>
-<!-- Bootstrap core JavaScript -->
-<script src="${pageContext.request.contextPath}/jquery/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
