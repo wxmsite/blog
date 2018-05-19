@@ -1,23 +1,82 @@
 package com.blog.model;
-
+/**
+ * author bebetter159
+ * date  时间未详
+ */
+/**
+ * 保存每位博客专家的信息
+ */
 public class ExpertUrl {
-
+    private int eid;
+    private String blogName;
+    private String expertUrl;
     private String avatarUrl;
-    private String blogUrl;
     private String name;
     private String place;
     private String work;
+    private long readNum;
     private int articleNum;
-    private int readNum;
+    public ExpertUrl(){
 
-    public ExpertUrl(String avatarUrl, String blogUrl, String name, String place, String work, int articleNum, int readNum) {
+    }
+
+    public ExpertUrl(int eid, String blogName,String expertUrl, String avatarUrl, String name, String place, String work, long readNum, int articleNum) {
+        this.eid = eid;
+        this.blogName=blogName;
+        this.expertUrl = expertUrl;
         this.avatarUrl = avatarUrl;
-        this.blogUrl = blogUrl;
+        this.name = name;
+        this.place = place;
+        this.work = work;
+        this.readNum = readNum;
+        this.articleNum = articleNum;
+    }
+
+    public ExpertUrl(String blogName,String avatarUrl, String expertUrl, String name, String place, String work, int articleNum, int readNum) {
+       this.blogName=blogName;
+        this.avatarUrl = avatarUrl;
+        this.expertUrl = expertUrl;
         this.name = name;
         this.place = place;
         this.work = work;
         this.articleNum = articleNum;
         this.readNum = readNum;
+    }
+
+    public int getEid() {
+        return eid;
+    }
+
+    public void setEid(int eid) {
+        this.eid = eid;
+    }
+    public String getBlogName() {
+        return blogName;
+    }
+
+    public void setBlogName(String blogName) {
+        this.blogName = blogName;
+    }
+    public long getReadNum() {
+        return readNum;
+    }
+    public void setReadNum(long readNum) {
+        this.readNum = readNum;
+    }
+    public int getArticleNum() {
+        return articleNum;
+    }
+    public void setArticleNum(int articleNum) {
+        this.articleNum = articleNum;
+    }
+
+
+    public String getExpertUrl() {
+        return expertUrl;
+    }
+
+    public void setExpertUrl(String expertUrl) {
+        this.expertUrl = expertUrl;
     }
 
     public String getAvatarUrl() {
@@ -26,14 +85,6 @@ public class ExpertUrl {
 
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
-    }
-
-    public String getBlogUrl() {
-        return blogUrl;
-    }
-
-    public void setBlogUrl(String blogUrl) {
-        this.blogUrl = blogUrl;
     }
 
     public String getName() {
@@ -60,32 +111,5 @@ public class ExpertUrl {
         this.work = work;
     }
 
-    public int getArticleNum() {
-        return articleNum;
-    }
 
-    public void setArticleNum(int articleNum) {
-        this.articleNum = articleNum;
-    }
-
-    public int getReadNum() {
-        return readNum;
-    }
-
-    @Override
-    public String toString() {
-        return "ExpertUrl{" +
-                "avatarUrl='" + avatarUrl + '\'' +
-                ", blogUrl='" + blogUrl + '\'' +
-                ", name='" + name + '\'' +
-                ", place='" + place + '\'' +
-                ", work='" + work + '\'' +
-                ", articleNum=" + articleNum +
-                ", readNum=" + readNum +
-                '}';
-    }
-
-    public void setReadNum(int readNum) {
-        this.readNum = readNum;
-    }
 }

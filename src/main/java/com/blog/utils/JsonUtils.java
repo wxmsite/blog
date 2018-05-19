@@ -9,9 +9,10 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-
-
+/**
+ * author bebetter159
+ * date  时间未详
+ */
 public class JsonUtils {
 
     private static final SerializeConfig config;

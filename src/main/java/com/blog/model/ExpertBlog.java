@@ -2,10 +2,17 @@ package com.blog.model;
 
 import java.sql.Date;
 
+/**
+ * author bebetter159
+ * date  2018/5/15 17:04
+ */
+
+/**
+ * 用来保存每篇博客的内容
+ */
 public class ExpertBlog {
     private int uid;
     private String blogUrl;
-
     private String title;
     private String content;
     private Date date;

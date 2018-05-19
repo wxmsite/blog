@@ -7,120 +7,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bff3793f-9fc2-4be8-b022-278a80e205c6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/model/BlogUrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/blog_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/ExpertUrlMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/SearchMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/model/ExpertUrl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/ExpertUrlService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/SearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/SearchServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/utils/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SearchMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BlogTitleSpider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ExpertTitleSpider2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StaticTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/BlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/BlogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/BlogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/BlogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/ExpertBlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/ExpertBlogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/PrivilegeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/PrivilegeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/Mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/UserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/SessionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/model/BlogUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/model/BlogUrl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/model/ExpertBlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/model/ExpertBlog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/model/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/model/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/model/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/model/blog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/pv/PvCount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/utils/JavaWebToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/utils/JavaWebToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/model/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/model/UserPrivilege.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/model/UserPrivilege.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/BlogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/ExpertBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/ExpertBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/PrivilegeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/PrivilegeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/UserInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/ExpertBlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/ExpertBlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/ExpertUrlServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/UserInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/utils/AuthUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/utils/AuthUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/utils/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/utils/JsonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExpertBlogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ExpertBlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExpertUrlMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/CommonUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/CommonUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addUser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/allUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/allUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editUser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/blog-home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/blog-home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery.slim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery.slim.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Bar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/544a11d3Na5a3d566.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/login-all-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/one4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/one5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/one6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/phone-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/regist-btn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/regist-word.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/taotao-logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExpertBlogSpider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExpertBlogSpider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ExpertSpider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExpertSpider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ExpertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExpertTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Foo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/Mapper/BlogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/Mapper/BlogMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/controller/BlogController$Db.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/controller/BlogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/controller/PersonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/controller/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/controller/UserInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/interceptor/LoginInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/model/ExpertBlog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/model/ExpertBlog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/model/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/model/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/model/blog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/pv/PvCount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/service/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/service/BlogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/service/impl/BlogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/service/impl/BlogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/utils/JavaWebToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/utils/JavaWebToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/utils/JsonUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/utils/JsonUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/utils/JsonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/blog/utils/JsonUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/CommonUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/CommonUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/allUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/allUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/view/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/css/blog-home.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/css/blog-home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/jquery/jquery.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/jquery/jquery.slim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/jquery/jquery.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/jquery/jquery.slim.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/Mapper/BlogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/Mapper/BlogMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/BlogController$Db.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/BlogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExpertTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FastJsonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FastJsonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/Mapper/BlogMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/Mapper/ExpertBlogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/Mapper/ExpertBlogMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/Mapper/UserInfoMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/controller/PersonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/controller/UserInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/PersonController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/SessionController$Db.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/SessionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/controller/UserInfoController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/blog/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/model/BlogUrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/model/BlogUrl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/blog/model/ExpertBlog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/model/ExpertBlog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/model/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/model/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/model/blog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/pv/PvCount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/service/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/service/BlogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/service/impl/BlogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/service/impl/BlogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/utils/JavaWebToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/utils/JavaWebToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/model/ExpertUrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/model/ExpertUrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/model/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/model/UserPrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/model/UserPrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/service/BlogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/service/ExpertBlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/service/ExpertBlogService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/service/UserInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/service/impl/BlogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/service/impl/ExpertBlogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/service/impl/ExpertBlogServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/service/impl/UserInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blog/utils/AuthUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/utils/AuthUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/blog/utils/JsonUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/utils/JsonUtils$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/blog/utils/JsonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blog/utils/JsonUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ExpertBlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ExpertBlogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserInfoMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Bar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ExpertBlogSpider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ExpertBlogSpider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ExpertSpider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ExpertSpider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ExpertTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ExpertTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Foo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ExpertTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/FastJsonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FastJsonTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UserTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -136,38 +118,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExpertSpider.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ExpertSpider.java">
+      <file leaf-file-name="editUser.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editUser.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+            <state relative-caret-position="190">
+              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpertUrl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/ExpertUrl.java">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-676">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/BlogController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-163">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-842">
+              <caret line="81" column="16" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spider.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.m2/repository/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/Spider.class">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+            <state relative-caret-position="110">
+              <caret line="106" column="20" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpertBlogSpider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ExpertBlogSpider.java">
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="152">
+              <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -183,16 +219,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>faster</find>
-      <find>5.0.4.RELEASE</find>
-      <find>tx</find>
-      <find>Sign</find>
-      <find>go</find>
-      <find>GitHub Light</find>
-      <find>pageInfo</find>
-      <find>ExpertBlog</find>
-      <find>csdn</find>
-      <find>郑聪艺</find>
       <find>张子辰</find>
       <find>石宗银</find>
       <find>黄海涛</find>
@@ -207,6 +233,22 @@
       <find>容芳志</find>
       <find>赵学庆</find>
       <find>单红宇</find>
+      <find>111111</find>
+      <find>111</find>
+      <find>true</find>
+      <find>article-item-box and csdn-tracking-statistics</find>
+      <find>0</find>
+      <find>test</find>
+      <find>我要</find>
+      <find>123456</find>
+      <find>success</find>
+      <find>https://blog.csdn.net/gnuhpc/article/details/6406994</find>
+      <find>Pages</find>
+      <find>UserInfo</find>
+      <find>新增</find>
+      <find>登录</find>
+      <find>1111</find>
+      <find>新</find>
     </findStrings>
     <replaceStrings>
       <replace>${mysql.version}</replace>
@@ -222,57 +264,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/UserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SpiderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/staticTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/StaticTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/ExpertArticle.java" />
-        <option value="$PROJECT_DIR$/src/test/java/GithubRepoPageProcessor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BlogSpider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/ExpertUrl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/ExpertBlogService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/impl/ExpertBlogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/ExpertBlogMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExpertBlogMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/utils/Token.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/utils/JavaWebToken.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/github.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/PageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/utils/CookieUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/utils/AuthUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/JedisDao/JedisClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/JedisDao/impl/JedisClientCluster.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/JedisDao/impl/JedisClientSingle.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/PersonController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/interceptor/StatusInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/springmvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/interceptor/LoginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/CommonUser.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/Blog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/ExpertBlog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/BlogService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/BlogMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/utils/JsonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/BlogUrl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/allUser.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/UserInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/UserInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/BlogController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ExpertTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/blog-home.css" />
-        <option value="$PROJECT_DIR$/src/test/java/ExpertBlogSpider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/FastJsonTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ExpertSpider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/utils/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/utils/AuthUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/PrivilegeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/ExpertBlogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/UserPrivilege.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/ExpertUrl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/UserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/PrivilegeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/ExpertBlogMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/UserInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/PersonController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/BlogController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/UserInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/impl/UserInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/utils/MD5Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addUser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/CommonUser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/SearchService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/SearchMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/impl/SearchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/SearchMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/model/BlogUrl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/Mapper/ExpertUrlMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/ExpertUrlService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/service/impl/ExpertUrlServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExpertUrlMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ExpertBlogSpider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BlogTitleSpider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ExpertTitleSpider2.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/allUser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editUser.jsp" />
       </list>
     </option>
   </component>
@@ -333,6 +375,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -396,7 +439,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -486,18 +545,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="F:/chrome/Spring-solr-master/Spring-solr" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21028571" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -525,16 +583,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExpertSpider.insertTest">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="ExpertSpider.insertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BlogTitleSpider.insertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="blog" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ExpertSpider" />
+      <option name="MAIN_CLASS_NAME" value="BlogTitleSpider" />
       <option name="METHOD_NAME" value="insertTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -546,14 +604,65 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BlogTitleSpider.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="blog" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="MAIN_CLASS_NAME" value="BlogTitleSpider" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ExpertBlogSpider.insertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExpertBlogSpider" />
+      <option name="METHOD_NAME" value="insertTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ExpertSpider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExpertSpider" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="StaticTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StaticTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -674,13 +783,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="JUnit.UserTest" />
-      <item itemvalue="JUnit.ExpertSpider.insertTest" />
+      <item itemvalue="JUnit.ExpertBlogSpider.insertTest" />
+      <item itemvalue="JUnit.StaticTest.test" />
+      <item itemvalue="JUnit.ExpertSpider" />
+      <item itemvalue="JUnit.BlogTitleSpider.insertTest" />
+      <item itemvalue="JUnit.BlogTitleSpider.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExpertSpider.insertTest" />
-        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.BlogTitleSpider.insertTest" />
+        <item itemvalue="JUnit.BlogTitleSpider.test" />
+        <item itemvalue="JUnit.ExpertBlogSpider.insertTest" />
+        <item itemvalue="JUnit.ExpertSpider" />
+        <item itemvalue="JUnit.StaticTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -757,43 +872,71 @@
       <workItem from="1526279722075" duration="956000" />
       <workItem from="1526298616860" duration="16366000" />
       <workItem from="1526316653687" duration="338000" />
+      <workItem from="1526352949553" duration="4918000" />
+      <workItem from="1526367640586" duration="8171000" />
+      <workItem from="1526378363046" duration="18253000" />
+      <workItem from="1526432902184" duration="3938000" />
+      <workItem from="1526440717799" duration="4789000" />
+      <workItem from="1526451882442" duration="4001000" />
+      <workItem from="1526457413323" duration="2181000" />
+      <workItem from="1526486097444" duration="1608000" />
+      <workItem from="1526517253700" duration="1340000" />
+      <workItem from="1526530886453" duration="3230000" />
+      <workItem from="1526542452621" duration="795000" />
+      <workItem from="1526559523902" duration="670000" />
+      <workItem from="1526606144050" duration="7738000" />
+      <workItem from="1526616265160" duration="2711000" />
+      <workItem from="1526623633151" duration="3232000" />
+      <workItem from="1526627681027" duration="2123000" />
+      <workItem from="1526630990657" duration="4778000" />
+      <workItem from="1526636134848" duration="1575000" />
+      <workItem from="1526644656528" duration="6211000" />
+      <workItem from="1526654750903" duration="1080000" />
+      <workItem from="1526656439853" duration="5670000" />
+      <workItem from="1526688540396" duration="2343000" />
+      <workItem from="1526692365806" duration="2159000" />
+      <workItem from="1526695714010" duration="2670000" />
+      <workItem from="1526698668947" duration="3895000" />
+      <workItem from="1526710880485" duration="25000" />
+      <workItem from="1526717444166" duration="12004000" />
+      <workItem from="1526735931141" duration="5502000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 02m 05s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 16h 29m 48s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 07m 08s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 16h 34m 28s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 12m 11s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 16h 38m 21s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 13m 59s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 16h 41m 16s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 19m 06s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 16h 48m 55s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 21m 36s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 17h 27m 58s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 24m 30s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 17h 29m 41s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 29m 56s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 17h 47m 31s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 32m 14s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 18h 13m 46s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExpertSpider_insertTest - 2018.05.15 at 00h 55m 39s.xml">
-      <configuration name="ExpertSpider.insertTest" configurationId="JUnit" />
+    <history-entry file="BlogTitleSpider_insertTest - 2018.05.19 at 21h 09m 11s.xml">
+      <configuration name="BlogTitleSpider.insertTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258894000" />
+    <option name="totallyTimeSpent" value="376504000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -806,22 +949,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32874355" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32702237" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32615894" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3298969" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5060514" side_tool="true" weight="0.32702237" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.50680786" side_tool="true" weight="0.3717728" />
       <window_info anchor="bottom" id="Application Servers" order="10" weight="0.32702237" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49394855" weight="0.3717728" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49319214" weight="0.34423408" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3298969" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30408472" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="5" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -835,7 +979,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3298969" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32702237" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32615894" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -845,307 +989,371 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Bar.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FastJsonTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/pojo/BlogResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/JedisDao/impl/JedisClientSingle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="36" column="98" selection-start-line="36" selection-start-column="98" selection-end-line="36" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/utils/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/CommonUser.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="274">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/Blog.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/Mapper/BlogMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PrivilegeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="54" lean-forward="true" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/SearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SearchMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/SearchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatisConfig.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/Mapper/PrivilegeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/Mapper/ExpertBlogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/Mapper/SearchMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/Page.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/selector/Html.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/selector/XpathSelector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/selector/Selectors.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/selector/HtmlNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/selector/Selectable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ExpertSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/ExpertUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/BlogUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/ExpertBlog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/ExpertBlogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/BlogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/utils/JsonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/utils/JavaWebToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/utils/ExceptionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/utils/AuthUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/utils/CookieUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PrivilegeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExpertBlogMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatisConfig.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/resource.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/BlogUrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="5" column="79660" selection-start-line="5" selection-start-column="79660" selection-end-line="5" selection-end-column="79660" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/allUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="92" column="62" selection-start-line="92" selection-start-column="62" selection-end-line="92" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#nav#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="67" column="43" lean-forward="true" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/PersonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/SessionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/UserInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/UserInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/Mapper/UserInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/Person.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/BlogController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/UserInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ExpertTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/blog-home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ExpertBlogSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/ExpertBlogService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="161">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/Spider.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/ExpertUrlServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+        <state relative-caret-position="323">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/ExpertUrl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/Mapper/ExpertUrlMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/ExpertUrlService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExpertUrlMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ExpertBlogSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/Mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ExpertTitleSpider2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ExpertSpider.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/BlogTitleSpider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+        <state relative-caret-position="247">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/UserPrivilege.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+          <folding>
+            <element signature="e#2922#2923#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-163">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-842">
+          <caret line="81" column="16" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/BlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="106" column="20" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="15870" column="12" selection-start-line="15870" selection-start-column="12" selection-end-line="15870" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/allUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#nav#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#nav#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-676">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
         </state>
       </provider>
     </entry>
