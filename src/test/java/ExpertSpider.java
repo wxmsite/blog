@@ -1,7 +1,7 @@
-import com.blog.Mapper.ExpertBlogMapper;
+import com.blog.Mapper.ExpertUrlMapper;
 import com.blog.model.ExpertUrl;
-import com.blog.service.ExpertBlogService;
-import com.blog.service.impl.ExpertBlogServiceImpl;
+import com.blog.service.ExpertUrlService;
+import com.blog.service.impl.ExpertUrlServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
@@ -14,36 +14,37 @@ import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
 import us.codecraft.webmagic.selector.Selectable;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-
+/**
+ * author bebetter159
+ * date  时间未详
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring/applicationContext.xml")
 public class ExpertSpider implements PageProcessor {
 
     private static ApplicationContext ctx = null;
-    private static ExpertBlogService expertBlogService;
-    private static ExpertBlogMapper expertBlogMapper;
-    ExpertUrl expertUrl;
+    private static ExpertUrlService expertUrlService;
+    private static ExpertUrlMapper expertUrlMapper;
+
     Map<String, Boolean> map = new ConcurrentHashMap<>();
-    private final static ThreadLocal<ExpertUrl>blog=new ThreadLocal<>();
+    private final static ThreadLocal<ExpertUrl> blog = new ThreadLocal<>();
 
     //When you use @Autowired in a new thread,you will get a nullpointerException
     static {
         ctx = new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
-        expertBlogMapper = (ExpertBlogMapper) ctx.getBean("expertBlogMapper");
-        expertBlogService = new ExpertBlogServiceImpl(expertBlogMapper);
+        expertUrlMapper = (ExpertUrlMapper) ctx.getBean("expertUrlMapper");
+        expertUrlService = new ExpertUrlServiceImpl(expertUrlMapper);
     }
 
 
     // 这个是列表页
-    public static final String EXPERTS_LIST = "http://blog\\.csdn\\.net/peoplelist\\.html\\?channelid=0\\&page="
+    public static final String EXPERTS_LIST = "https://blog\\.csdn\\.net/peoplelist\\.html\\?channelid=0\\&page="
             + "\\w+";
 
-    // 博客详情页
-    // public static final String EXPERTS_DETAILS =
+
     // "http://blog.csdn.net/\\w+";// \\w+是一个匹配符，可以匹配任意字段
     private Site site = Site.me().setDomain("blog.csdn.net").setSleepTime(300).setUserAgent(
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31");
@@ -66,6 +67,7 @@ public class ExpertSpider implements PageProcessor {
             for (Selectable s : selectable.nodes()) {
                 //获得博客url和头像url
                 String url = s.xpath("//a[@class=\"expert_name\"]").links().toString();
+                String blogName=getLastSlantContent(url);
                 String avatarUrl = s.xpath("//img[@class=\"expert_head\"]/@src").toString();
                 //获得博主名字
                 String name = s.xpath("//a[@class=\"expert_name\"]/text()").toString();
@@ -75,16 +77,9 @@ public class ExpertSpider implements PageProcessor {
                 //获得阅读量和原创文章数
                 String articleNum = s.xpath("//div[@class=\"count_l fl\"]//b/tidyText()").toString();
                 String readNum = s.xpath("//div[@class=\"count_l fr\"]//b/tidyText()").toString();
-               /* if(!map.containsKey(url)){
-                    map.put(url,true);
-                }
-                else {
-                    System.out.println(url+"error");
-                }*/
 
-                 blog.set(new ExpertUrl(avatarUrl,url,name,place,work,Integer.parseInt(articleNum),Integer.parseInt(readNum)));
-                 expertBlogService.insertUrl(blog.get());
-
+                blog.set(new ExpertUrl(blogName,avatarUrl, url, name, place, work, Integer.parseInt(articleNum), Integer.parseInt(readNum)));
+                expertUrlService.insertExpertUrl(blog.get());
 
 
             }
@@ -98,9 +93,16 @@ public class ExpertSpider implements PageProcessor {
 
     @Test
     public void insertTest() {
-        Spider.create(new ExpertSpider()).addUrl("http://blog.csdn.net/peoplelist.html?channelid=0&page=1").thread(5).run();
+        Spider.create(new ExpertSpider()).addUrl("https://blog.csdn.net/peoplelist.html?channelid=0&page=1").thread(15).run();
 
     }
-
+    public static String getLastSlantContent(String fullPath) {
+        int pos = fullPath.lastIndexOf("/");
+        if (pos != -1) {
+            return fullPath.substring(pos + 1);
+        } else {
+            return null;
+        }
+    }
 
 }

@@ -1,13 +1,19 @@
 package com.blog.service;
 
-import com.blog.model.ExpertUrl;
 import com.blog.model.ExpertBlog;
-import org.springframework.stereotype.Service;
 
-@Service
+import java.util.List;
+/**
+ * author bebetter159
+ * date  时间未详
+ */
+/**
+ * 管理博客
+ */
 public interface ExpertBlogService {
-     boolean insertUrl(ExpertUrl expertUrl);
-     boolean deleteUrl(String blogUrl);
-     boolean insertBlog(ExpertBlog expertBlog);
-     boolean deleteBlog(int id);
+    List<ExpertBlog> getAllblog();
+
+
+
+
 }

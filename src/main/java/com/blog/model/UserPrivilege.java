@@ -1,5 +1,9 @@
 package com.blog.model;
-
+/**
+ * author bebetter159
+ * date  时间未详
+ *
+ */
 public class UserPrivilege  {
     private  int id;
     private  String privilege;
