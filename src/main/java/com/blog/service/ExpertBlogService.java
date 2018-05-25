@@ -1,7 +1,5 @@
 package com.blog.service;
-
-import com.blog.model.ExpertBlog;
-
+import com.blog.model.Blog;
 import java.util.List;
 /**
  * author bebetter159
@@ -11,7 +9,7 @@ import java.util.List;
  * 管理博客
  */
 public interface ExpertBlogService {
-    List<ExpertBlog> getAllblog();
+    List<Blog> getAllblog();
 
 
 

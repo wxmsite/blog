@@ -60,8 +60,6 @@
                         <path fill-rule="evenodd"
                               d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
                     </svg>
-
-
                 </li>
             </ul>
         </div>
@@ -73,89 +71,76 @@
     <div class="row">
         <!-- blog Entries Column -->
         <div class="col-md-8">
-
-
             <div class="row">
-                <div class="col-md-12">
-                    <table class="table table-hover">
-                        <tbody>
-                        <c:forEach items="${allBlog.list }" var="allBlog">
-                            <tr class="row-click-able" data-href="${allBlog.expertUrl}">
-                                <td>${allBlog.name}</td>
-                                <td>${allBlog.place }</td>
-                                <td>${allBlog.work }</td>
-                                <td>${allBlog.readNum}</td>
-                                <td>${allBlog.articleNum}</td>
-                            </tr>
-                        </c:forEach>
-                        </tbody>
-                    </table>
-                </div>
+                <c:forEach items="${allBlog.list}" var="blog">
+                    <div style="width: 100%">
+                        <div>
+                            <h5>
+                                <a href="${blog.blogUrl}" target="_blank">${blog.title}</a>
+                            </h5>
+                        </div>
+                        <div>
+                            <p style="float: left;">${blog.time}</p>
+                            <p style="float: left;"> 阅读量:${blog.readNum}</p>
+                            <p style="float: left;"> 评论量:${blog.commentNum}</p>
+                        </div>
+                    </div>
+                </c:forEach>
             </div>
-
             <hr style="height:1px;border:none;border-top:1px solid #ccc;"/>
-            <!-- 分页导航栏 -->
-
-            <!-- 分页信息 -->
             <div class="row">
-                <!-- 分页文字信息，其中分页信息都封装在allBlog中 -->
-                <div class="col-md-4">
-                    ${allBlog.total}条记录，${allBlog.pages}页
-                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
 
-                <!-- 分页条 -->
-                <div class="col-md-8">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                            <li style="margin-left: 20px"><a href="${path}/?pn=1">首页</a></li>
-
-                            <c:if test="${allBlog.hasPreviousPage }">
-                                <li style="margin-left: 20px">
-                                    <a  href="${path}/?pn=${allBlog.pageNum-1}" aria-label="Previous">上一页
-                                    </a>
+                        <c:if test="${allBlog.hasPreviousPage}">
+                            <li class="active" style="margin-left: 20px">
+                                <a href="${path}/search?keyword=${keyword}&pn=${allBlog.currentPage-1}">上一页</a>
+                            </li>
+                        </c:if>
+                        <c:forEach items="${allBlog.navigatepageNums }" var="page_Num">
+                            <c:if test="${page_Num == allBlog.currentPage }">
+                                <li style="margin-left: 20px" class="active">
+                                    <a href="${path}/search?keyword=${keyword}&pn=${ page_Num}">${ page_Num}</a>
                                 </li>
                             </c:if>
 
-                            <c:forEach items="${allBlog.navigatepageNums }" var="page_Num">
-                                <c:if test="${page_Num == allBlog.pageNum }">
-                                    <li style="margin-left: 20px" class="active">
-                                        <a href="${path}/?pn=${ page_Num}">${ page_Num}</a>
-                                    </li>
-                                </c:if>
-                                <c:if test="${page_Num != allBlog.pageNum }">
-                                    <li>
-                                        <a style="margin-left: 20px" href="${path}/?pn=${ page_Num}">${ page_Num}</a>
-                                    </li>
-                                </c:if>
-                            </c:forEach>
-                            <c:if test="${allBlog.hasNextPage }">
+                            <c:if test="${page_Num != allBlog.currentPage }">
                                 <li>
-                                    <a style="margin-left: 20px" href="${path}/?pn=${allBlog.pageNum+1}"
-                                       aria-label="Next">
-                                        <span aria-hidden="true">下一页</span>
-                                    </a>
+                                    <a style="margin-left: 20px"
+                                       href="${path}/search?keyword=${keyword}&pn=${ page_Num}">${ page_Num}</a>
                                 </li>
                             </c:if>
+                        </c:forEach>
+                        <c:if test="${allBlog.hasNextPage}">
+                            <li class="active" style="margin-left: 20px;">
+                                <a href="${path}/search?keyword=${keyword}&pn=${allBlog.currentPage+1}">下一页</a>
+                            </li>
+                        </c:if>
 
-                            <li style="margin-left: 20px"><a href="${path}/?pn=${allBlog.pages}">末页</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                    </ul>
+                </nav>
             </div>
         </div>
 
+
+
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
-
             <!-- Search Widget -->
-            <div class="card my-4">
+            <div class="card my-4 ">
                 <h5 class="card-header">Search</h5>
                 <div class="card-body">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for...">
-                        <span>
-                        <button class="btn btn-secondary" type="button">Search</button>
-                        </span>
+                        <form role="form" id="searchForm" style=" " class="">
+                            <div class="form-inline">
+                                <input type="text" class="form-control" name="keyword" placeholder="Search for...">
+                                <input class="btn btn-secondary " type="submit"
+                                       onclick="form=document.getElementById('searchForm');form.action='/search'"
+                                       value="Search">
+                                </input>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -208,9 +193,7 @@
                     Welcome to my blog! If you have any questions,please contact me!
                 </div>
             </div>
-
         </div>
-
     </div>
     <!-- /.row -->
 
@@ -240,7 +223,6 @@
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                 </a>
-
             </li>
         </ul>
         <p class="m-0 text-center text-white">网站访问量:${count}</p>

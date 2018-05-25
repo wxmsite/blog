@@ -1,7 +1,5 @@
 package com.blog.Mapper;
-
-
-import com.blog.model.ExpertBlog;
+import com.blog.model.Blog;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -11,7 +9,7 @@ import java.util.List;
  */
 @Mapper
 public interface ExpertBlogMapper {
-    List<ExpertBlog> getAllBlog();
+    List<Blog> getAllBlog();
 
 
 

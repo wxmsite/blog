@@ -2,8 +2,8 @@ package com.blog.service.impl;
 
 
 import com.blog.Mapper.ExpertBlogMapper;
-
-import com.blog.model.ExpertBlog;
+import com.blog.model.Blog;
+import com.blog.model.BlogDetail;
 import com.blog.service.ExpertBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class ExpertBlogServiceImpl implements ExpertBlogService {
 
 
     @Override
-    public List<ExpertBlog> getAllblog() {
+    public List<Blog> getAllblog() {
         return expertBlogMapper.getAllBlog();
     }
 }
