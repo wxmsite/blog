@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.Mapper.BlogMapper">
+    <select id="getAllBlog" resultType="Blog">
+        select
+            blog_url    blogUrl,
+            title,
+            time,
+            read_num    readNum,
+            comment_num commentNum
+        from expert_blog_url
+        order by read_num desc
+    </select>
+    <insert id="savePersonalBlog">
+        insert into blog (title,content,date,read_num,comment_num) values ( #{title}, #{content}, #{date}, #{readNum}, #{commentNum})
+    </insert>
+    <select id="getAllPersonalBlog" resultType="BlogDetail">
+        select
+            blog_id    blogID,
+            title,
+            content,
+            date     date,
+            read_num    readNum,
+            comment_num commentNum
+        from blog
+        order by date desc
+        limit #{startOffset},#{pageSize}
+
+    </select>
+    <select id="getPersonalBlog" resultType="BlogDetail">
+        select
+            blog_id blogID,
+            title,
+            content,
+            date date,
+            read_num readNum,
+            comment_num commentNum
+        from blog
+        where blog_id =#{blogID}
+    </select>
+    <select id="getBlogTitle" resultType="BlogDetail">
+        select
+            id,
+            title
+        from expert_blog_url
+    </select>
+    <select id="getCount" resultType="int">
+        select count(blog_id)
+        from blog
+    </select>
+</mapper>

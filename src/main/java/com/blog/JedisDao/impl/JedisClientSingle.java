@@ -82,12 +82,9 @@ public class JedisClientSingle implements JedisClient {
         jedis.close();
         return result;
     }
-
-
     public long getAndputPv(){
         Jedis jedis = jedisPool.getResource();
         long result=incr("count");
-
         jedis.close();
         return result;
     }

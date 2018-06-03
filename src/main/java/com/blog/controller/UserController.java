@@ -31,18 +31,7 @@ public class UserController {
 
 
     /**
-     * 跳转到添加用户界面
-     * @return
-     */
-    @RequestMapping("/toAddUser")
-    public String toAddUser() {
-        return "addUser";
-    }
-
-
-    /**
      * 更新用户数据
-     *
      * @param model
      * @param user
      * @return
@@ -60,7 +49,6 @@ public class UserController {
 
     /**
      * 获取所有用户数据
-     *
      * @param model
      * @return
      */
@@ -68,12 +56,11 @@ public class UserController {
     public String getAllUser(Model model) {
         List<User> user = userService.findAll();
         model.addAttribute("userList", user);
-        return "allUser";
+        return "user";
     }
 
     /**
      * 查询用户
-     *
      * @param id
      * @param model
      * @return
@@ -112,7 +99,7 @@ public class UserController {
         //将用户信息放入PageInfo对象里
         PageInfo page = new PageInfo(users, 5);
         model.addAttribute("pageInfo", page);
-        return "allUser";
+        return "user";
     }
 
 

@@ -11,13 +11,13 @@
     <title>blog Home - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/bootstrap4.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/css/blog-home.css" rel="stylesheet">
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/github.css" rel="stylesheet">
-    <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
+    <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
     <style type="text/css">
         .row-click-able {
             cursor: pointer;
@@ -30,14 +30,14 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Ming blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="#">Home
                         <span class="sr-only">(current)</span>
                     </a>
@@ -69,59 +69,125 @@
 <!-- Page Content -->
 <div class="container">
     <div class="row">
-        <!-- blog Entries Column -->
+
         <div class="col-md-8">
+            <%-- <div class="row">
+                 <form action="/" id="original">
+                     <label style="margin-top: 15px"> <input type="checkbox" name="value" value="1"
+                                                             onchange="document.getElementById('original').submit()">只看个人博客
+                     </label>
+                 </form>
+             </div>
+            <hr style="height:1px;border:none;border-top:1px solid #ccc;"/>--%>
             <div class="row">
                 <c:forEach items="${allBlog.list}" var="blog">
                     <div style="width: 100%">
                         <div>
                             <h5>
-                                <a href="${blog.blogUrl}" target="_blank">${blog.title}</a>
+                                <a href="/blog/detail/${blog.blogID}" target="_blank">${blog.title}</a>
                             </h5>
                         </div>
+                            <%--此处添加部分内容--%>
+                            <%--<div>
+                            <h5>
+                                <a href="/blog/detail/${blog.blogUrl}"target="_blank">${blog.content}</a>
+                            </h5>
+                        </div>--%>
                         <div>
-                            <p style="float: left;">${blog.time}</p>
-                            <p style="float: left;"> 阅读量:${blog.readNum}</p>
-                            <p style="float: left;"> 评论量:${blog.commentNum}</p>
+                            <p style="float: left ;margin-left:10px">${blog.date}</p>
+
+                            <p style="float: left ;margin-left: 10px"> 阅读量:${blog.readNum}</p>
+                            <p style="float: left; margin-left: 10px"> 评论量:${blog.commentNum}</p>
                         </div>
                     </div>
                 </c:forEach>
             </div>
-            <hr style="height:1px;border:none;border-top:1px solid #ccc;"/>
-            <div class="row">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
 
-                        <c:if test="${allBlog.hasPreviousPage}">
-                            <li class="active" style="margin-left: 20px">
-                                <a href="${path}/search?keyword=${keyword}&pn=${allBlog.currentPage-1}">上一页</a>
-                            </li>
-                        </c:if>
-                        <c:forEach items="${allBlog.navigatepageNums }" var="page_Num">
-                            <c:if test="${page_Num == allBlog.currentPage }">
-                                <li style="margin-left: 20px" class="active">
-                                    <a href="${path}/search?keyword=${keyword}&pn=${ page_Num}">${ page_Num}</a>
-                                </li>
-                            </c:if>
+            <hr style="height:1px;border:none;border-top:1px solid #d9d9d9;"/>
 
-                            <c:if test="${page_Num != allBlog.currentPage }">
-                                <li>
-                                    <a style="margin-left: 20px"
-                                       href="${path}/search?keyword=${keyword}&pn=${ page_Num}">${ page_Num}</a>
-                                </li>
-                            </c:if>
-                        </c:forEach>
-                        <c:if test="${allBlog.hasNextPage}">
-                            <li class="active" style="margin-left: 20px;">
-                                <a href="${path}/search?keyword=${keyword}&pn=${allBlog.currentPage+1}">下一页</a>
-                            </li>
-                        </c:if>
+            <c:if test="${keyword==null}">
+                <c:if test="${allBlog.pages>1}">
+                    <div class="row">
+                        <div class="col-md-3">
+                                ${count}条记录，${allBlog.pages}页
+                        </div>
+                        <div class="col-md-9">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <c:if test="${allBlog.hasPreviousPage}">
+                                        <li style="margin-left: 20px">
+                                            <a href="${path}/?pn=${allBlog.currentPage-1}">上一页</a>
+                                        </li>
+                                    </c:if>
+                                    <c:forEach items="${allBlog.navigatepageNums }" var="page_Num">
+                                        <c:if test="${page_Num == allBlog.currentPage }">
+                                            <li style="margin-left: 20px">
+                                                <a href="${path}/?pn=${ page_Num}">${ page_Num}</a>
+                                            </li>
+                                        </c:if>
 
-                    </ul>
-                </nav>
-            </div>
+                                        <c:if test="${page_Num != allBlog.currentPage }">
+                                            <li>
+                                                <a style="margin-left: 20px"
+                                                   href="${path}/?pn=${ page_Num}">${ page_Num}</a>
+                                            </li>
+                                        </c:if>
+                                    </c:forEach>
+                                    <c:if test="${allBlog.hasNextPage}">
+                                        <li style="margin-left: 20px;">
+                                            <a href="${path}/?pn=${allBlog.currentPage+1}">下一页</a>
+                                        </li>
+                                    </c:if>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </c:if>
+            </c:if>
+
+
+            <c:if test="${keyword!=null}">
+                <c:if test="${allBlog.pages>1}">
+                    <div class="row">
+                        <div class="col-md-3">
+                                ${count}条记录，${allBlog.pages}页
+                        </div>
+                        <div class="col-md-9">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <c:if test="${allBlog.hasPreviousPage}">
+                                        <li style="margin-left: 20px">
+                                            <a href="${path}/search?keyword=${keyword}&pn=${allBlog.currentPage-1}">上一页</a>
+                                        </li>
+                                    </c:if>
+                                    <c:forEach items="${allBlog.navigatepageNums }" var="page_Num">
+                                        <c:if test="${page_Num == allBlog.currentPage }">
+                                            <li style="margin-left: 20px">
+                                                <a href="${path}/search?keyword=${keyword}&pn=${ page_Num}">${ page_Num}</a>
+                                            </li>
+                                        </c:if>
+
+                                        <c:if test="${page_Num != allBlog.currentPage }">
+                                            <li>
+                                                <a style="margin-left: 20px"
+                                                   href="${path}/search?keyword=${keyword}&pn=${ page_Num}">${ page_Num}</a>
+                                            </li>
+                                        </c:if>
+                                    </c:forEach>
+                                    <c:if test="${allBlog.hasNextPage}">
+                                        <li style="margin-left: 20px;">
+                                            <a href="${path}/search?keyword=${keyword}&pn=${allBlog.currentPage+1}">下一页</a>
+                                        </li>
+                                    </c:if>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </c:if>
+            </c:if>
         </div>
-
 
 
         <!-- Sidebar Widgets Column -->
@@ -225,7 +291,7 @@
                 </a>
             </li>
         </ul>
-        <p class="m-0 text-center text-white">网站访问量:${count}</p>
+        <p class="m-0 text-center text-white">网站访问量:${countPv}</p>
 
     </div>
     <!-- /.container -->
@@ -238,17 +304,11 @@
         });
     });
 
-
     function init() {
         window.location.href = "/Person/user";
     }
-
-
 </script>
-
-
 </body>
-
 </html>
 
 

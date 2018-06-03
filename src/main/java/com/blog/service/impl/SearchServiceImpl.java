@@ -1,21 +1,33 @@
 package com.blog.service.impl;
 
 import com.blog.Mapper.SearchMapper;
-import com.blog.model.Blog;
+import com.blog.model.BlogDetail;
 import com.blog.service.SearchService;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
+import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrDocument;
-import org.apache.solr.common.SolrInputDocument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.wltea.analyzer.lucene.IKAnalyzer;
 
+import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +38,7 @@ import java.util.List;
 @Service
 public class SearchServiceImpl implements SearchService {
     private long resultCount = 0;
-    private final int rows = 20;
+    private final int pageSize = 10;
     private Logger logger = LoggerFactory.getLogger(SearchServiceImpl.class);
     @Autowired
     SearchMapper searchMapper;
@@ -42,14 +54,14 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
-    public List<Blog> searchBlog(String keyword, int pn) {
+    public List<BlogDetail> searchBlogSolr(String keyword, int pn) {
         int start = pn - 1;
         SolrQuery query = new SolrQuery(keyword);
         query.setHighlight(true);
         //设置高亮
         //query.addHighlightField("blog_title");
-        query.setStart(start * rows);
-        query.setRows(rows);
+        query.setStart(start * pageSize);
+        query.setRows(pageSize);
         query.set("hl.fl", BLOG_TITLE_FIELD);
 
         query.setHighlightSimplePre("");
@@ -62,12 +74,12 @@ public class SearchServiceImpl implements SearchService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        List<Blog> blogList = new ArrayList<>();
+        List<BlogDetail> blogList = new ArrayList<>();
         resultCount = response.getResults().getNumFound();
-        System.out.println(resultCount);
+
         for (SolrDocument solrDocument : response.getResults()) {
-            Blog blog = new Blog();
-            blog.setBlogUrl(solrDocument.get(BLOG_URL_FIELD).toString());
+            BlogDetail blog = new BlogDetail();
+            blog.setBlogID(Integer.parseInt(solrDocument.get(BLOG_URL_FIELD).toString()));
             blog.setTitle(solrDocument.get(BLOG_TITLE_FIELD).toString());
             blog.setReadNum(Integer.parseInt(solrDocument.get(BLOG_READ_FIELD).toString()));
             blog.setCommentNum(Integer.parseInt(solrDocument.get(BLOG_COMMENT_FIELD).toString()));
@@ -77,24 +89,61 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
-    public long getCount() {
-        return resultCount;
+    public List<BlogDetail> searchBlogLucene(String keyword, int pn) {
+
+        List<BlogDetail> blogDetails = new ArrayList<>();
+        TopDocs hits = null;
+        ScoreDoc[] scores = null;
+        File indxeFile = new File("E:/blog索引");
+        //创建Directory对象
+        Directory directory = null;
+        try {
+            directory = FSDirectory.open(indxeFile.toPath());
+            DirectoryReader ireader = null;
+            ireader = DirectoryReader.open(directory);
+            IndexSearcher isearcher = new IndexSearcher(ireader);
+            String[] fields = {"title"};
+            Analyzer analyzer = new IKAnalyzer(true);
+            MultiFieldQueryParser mparser = new MultiFieldQueryParser(fields, analyzer);
+            System.out.println(keyword);
+            Query query = mparser.parse(keyword);
+            if (pn == 1) {
+                hits = isearcher.search(query, pageSize);
+            } else if (pn > 1) {
+                int start = (pn - 1) * pageSize;
+                hits = isearcher.search(query, start);
+                ScoreDoc prescore = hits.scoreDocs[start - 1];
+                hits = isearcher.searchAfter(prescore, query, pageSize);
+            }
+            if (hits != null) {
+                resultCount = hits.totalHits;
+                scores = hits.scoreDocs;
+                for (ScoreDoc scoreDoc : scores) {
+                    Document doc = isearcher.doc(scoreDoc.doc);
+                    System.out.println(doc.get("title"));
+                    BlogDetail blogDetail = new BlogDetail();
+                    blogDetail.setBlogID(Integer.parseInt(doc.get("blogUrl")));
+                    blogDetail.setTitle(doc.get("title"));
+                    blogDetail.setDate(doc.get("date"));
+                    blogDetail.setReadNum(Integer.parseInt(doc.get("readNum")));
+                    blogDetail.setCommentNum(Integer.parseInt(doc.get("commentNum")));
+                    blogDetails.add(blogDetail);
+                }
+            }
+
+            ireader.close();
+            directory.close();
+        } catch (IOException e) {
+            logger.error("lucene读取索引失败");
+        } catch (ParseException e) {
+            logger.error("lucene转换失败");
+        }
+        return blogDetails;
     }
 
     @Override
-    public boolean indexBlog(String blog_url, String title) {
-        SolrInputDocument doc = new SolrInputDocument();
-        doc.setField("id", blog_url);
-        doc.setField(BLOG_TITLE_FIELD, title);
-        UpdateResponse response = null;
-        try {
-            response = client.add(doc, 1000);
-        } catch (SolrServerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return response != null && response.getStatus() == 0;
+    public long getCount() {
+        return resultCount;
     }
 
 

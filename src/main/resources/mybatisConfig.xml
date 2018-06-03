@@ -10,6 +10,7 @@
     <!-- mybatis分页插件 -->
     <plugins>
         <plugin interceptor="com.github.pagehelper.PageHelper"></plugin>
+
     </plugins>
 
 </configuration>

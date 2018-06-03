@@ -65,7 +65,6 @@ public class UserServiceImpl implements UserService {
             map.put("msg", "用户名不存在");
             return map;
         }
-
         if (!MD5Util.MD5(password + user.getSalt()).equals(user.getPassword())) {
             map.put("msg", "密码不正确");
             return map;

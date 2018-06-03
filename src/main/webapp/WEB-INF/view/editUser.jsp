@@ -8,7 +8,7 @@
             + path + "/";
 %>
 <html>
-<script src="/js/jquery-1.6.4.js" type="text/javascript"></script>
+<script src="/js/jquery-2.1.1.min.js" type="text/javascript"></script>
 <html>
 <head>
     <title>编辑用户</title>

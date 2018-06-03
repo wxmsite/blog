@@ -1,9 +1,10 @@
 package com.blog.controller;
 
 import com.blog.JedisDao.impl.JedisClientSingle;
-import com.blog.model.Blog;
+import com.blog.model.BlogDetail;
 import com.blog.pagehelper.Page;
-import com.blog.service.ExpertBlogService;
+import com.blog.pagehelper.PageConstant;
+import com.blog.service.BlogService;
 import com.blog.service.ExpertUrlService;
 import com.blog.service.SearchService;
 import com.blog.utils.AuthUtil;
@@ -30,16 +31,15 @@ public class HomeController {
     @Autowired
     ExpertUrlService expertUrlService;
     @Autowired
-    ExpertBlogService expertBlogService;
+    BlogService blogService;
     @Autowired
     SearchService searchService;
-    /*初始keyword*/
-    private String keyword = "Java";
+
 
     @RequestMapping("/")
     public String home(HttpServletRequest request, @RequestParam(value = "pn", defaultValue = "1") Integer pn, Model model) {
         long pv = jedisClientSingle.getAndputPv();
-        model.addAttribute("count", pv);
+        model.addAttribute("countpv", pv);
         String sessionid = CookieUtil.getByName(request, "login");
         if (sessionid != null) {
             Map<String, Object> map = AuthUtil.decodeSession(sessionid);
@@ -50,20 +50,15 @@ public class HomeController {
             }
         } else
             model.addAttribute("status", false);
-        List<Blog> blogList = searchService.searchBlog("Java", pn);
-        long count=searchService.getCount();
-        Page page=new Page(blogList,pn,count,10);
-        model.addAttribute("allBlog",page);
-        model.addAttribute("keyword", "Java");
-
-        /*PageHelper.startPage(pn, 20);
-        List<Blog> blogList =expertBlogService.getAllblog();
-        PageInfo page=new PageInfo(blogList,1);
-        model.addAttribute("allBlog",page);*/
-       /* List<ExpertUrl> userInfos = expertUrlService.getAllExpertUrl();
-        //将用户信息放入PageInfo对象里
-        PageInfo page = new PageInfo(userInfos, 5);
-        model.addAttribute("allBlog", page);*/
+        List<BlogDetail> blogList = blogService.getAllPersonalBlog(pn, PageConstant.PAGE_SIZE);
+        int count = blogService.getCount();
+        Page page = new Page(blogList, pn, count, 8);
+        model.addAttribute("count", count);
+        model.addAttribute("allBlog", page);
+        /*PageHelper.startPage(pn, 3);
+        List<BlogDetail> blogList2 =blogService.getAllPersonalBlog();
+        PageInfo page2=new PageInfo(blogList2);
+        model.addAttribute("allBlog",page2);*/
         return "index";
     }
 }

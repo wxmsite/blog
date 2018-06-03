@@ -1,28 +1,37 @@
 package com.blog.model;
-
-import java.sql.Date;
-
 /**
  * author bebetter159
  * date  2018/5/15 17:04
  */
 
+import java.util.Date;
+
 /**
  * 用来保存每篇博客的内容
  */
 public class BlogDetail {
-    private int uid;
-    private String blogUrl;
+
+    private int blogID;
     private String title;
     private String content;
-    private Date date;
+    private String date;
     private int readNum;
     private int commentNum;
 
-    public BlogDetail(int uid, String blogUrl, String tile, String content, Date date, int readNum, int commentNum) {
+    public BlogDetail() {
+    }
 
-        this.uid=uid;
-        this.blogUrl = blogUrl;
+    public BlogDetail(int blogID, String tile, String content, String date, int readNum, int commentNum) {
+
+
+        this.blogID=blogID;
+        this.title = tile;
+        this.content = content;
+        this.date = date;
+        this.readNum = readNum;
+        this.commentNum = commentNum;
+    }
+    public BlogDetail(String tile, String content, String date, int readNum, int commentNum) {
         this.title = tile;
         this.content = content;
         this.date = date;
@@ -30,29 +39,21 @@ public class BlogDetail {
         this.commentNum = commentNum;
     }
 
-
-    public int getUid() {
-        return uid;
+    public int getBlogID() {
+        return blogID;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
-    }
-
-    public String getBlogUrl() {
-        return blogUrl;
-    }
-
-    public void setBlogUrl(String blogUrl) {
-        this.blogUrl = blogUrl;
+    public void setBlogID(int blogID) {
+        this.blogID = blogID;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTile(String tile) {
-        this.title = tile;
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getContent() {
@@ -63,11 +64,12 @@ public class BlogDetail {
         this.content = content;
     }
 
-    public Date getDate() {
+
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -85,5 +87,17 @@ public class BlogDetail {
 
     public void setCommentNum(int commentNum) {
         this.commentNum = commentNum;
+    }
+
+    @Override
+    public String toString() {
+        return "BlogDetail{" +
+                "blogID=" + blogID +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", date='" + date + '\'' +
+                ", readNum=" + readNum +
+                ", commentNum=" + commentNum +
+                '}';
     }
 }

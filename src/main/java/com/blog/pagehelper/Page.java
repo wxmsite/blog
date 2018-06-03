@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Page<T> {
     //每页显示的数据量，可封装一个类初始化它的值
-    private int pageSize = 20;
+    private int pageSize ;
     private int currentPage;
     private int firstPage;
     private int prePage;
@@ -42,12 +42,12 @@ public class Page<T> {
     }
 
     public Page(List<T> list, int currentPage, long count, int navigatePages) {
-
+         this.pageSize=PageConstant.PAGE_SIZE;
         this.hasPreviousPage = false;
         this.hasNextPage = false;
         this.currentPage = currentPage;
         //this.pages = list.size()/pageSize;
-        this.pages = (int) (count / pageSize + 1);
+        this.pages = (int) ((count-1) / pageSize + 1);
         this.navigatePages = navigatePages;
         this.list = list;
         this.calcNavigatepageNums();

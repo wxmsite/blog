@@ -96,12 +96,11 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     String login(Model model,HttpServletResponse response,
                  @RequestParam String username, @RequestParam String password) {
-        BlogResult result = null;
+
         String privilege = "";
         Map<String, String> map = userService.login(username, password);
         if (map.containsKey("success")) {
             if ((privilege = userService.getPrivilege(username)).equals("Admin")) {
-                result = new BlogResult("1");
                 Map<String, Object> loginInfo = new HashMap<>();
                 loginInfo.put("login", "yes");
                 loginInfo.put("timestamp", new Date());

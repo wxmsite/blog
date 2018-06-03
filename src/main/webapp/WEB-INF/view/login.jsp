@@ -18,11 +18,11 @@
     <title>Hello</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap3.min.css" rel="stylesheet">
     <link href="/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
+    <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
 
 </head>
 
@@ -41,6 +41,7 @@
                         <h6 class="subtitle">
                             <p hidden id="url">${success}</p>
                             ${msg}
+
                         </h6>
                     </div>
                     <form role="form" id="loginform" method="post">

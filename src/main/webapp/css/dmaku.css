@@ -1,0 +1,9 @@
+/****************************************************************
+ *																*		
+ * 						      代码库							*
+ *                        www.dmaku.com							*
+ *       		  努力创建完善、持续更新插件以及模板			*
+ * 																*
+****************************************************************/
+body{background: #494A5F;}
+.main-sidebar{position: absolute;top: 0;left: 0;height: 100%;min-height: 100%;width: 230px;z-index: 810;background-color: #222d32;}

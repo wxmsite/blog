@@ -7,7 +7,7 @@ package com.blog.model;
 public class Blog {
     private String blogUrl;
     private String title;
-    private String time;
+    private String date;
     private int readNum;
     private int commentNum;
 
@@ -28,12 +28,12 @@ public class Blog {
         this.title = title;
     }
 
-    public String getTime() {
-        return time;
+    public String getDate() {
+        return date;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public int getReadNum() {
@@ -57,7 +57,7 @@ public class Blog {
         return "Blog{" +
                 "blogUrl='" + blogUrl + '\'' +
                 ", title='" + title + '\'' +
-                ", time='" + time + '\'' +
+                ", date='" + date + '\'' +
                 ", readNum=" + readNum +
                 ", commentNum=" + commentNum +
                 '}';
