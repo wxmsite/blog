@@ -4,14 +4,11 @@ package com.blog.model;
  * date  2018/5/15 17:04
  */
 
-import java.util.Date;
-
 /**
  * 用来保存每篇博客的内容
  */
 public class BlogDetail {
-
-    private int blogID;
+    private String blogUrl;
     private String title;
     private String content;
     private String date;
@@ -21,16 +18,17 @@ public class BlogDetail {
     public BlogDetail() {
     }
 
-    public BlogDetail(int blogID, String tile, String content, String date, int readNum, int commentNum) {
+    public BlogDetail(String blogUrl, String tile, String content, String date, int readNum, int commentNum) {
 
 
-        this.blogID=blogID;
+        this.blogUrl = blogUrl;
         this.title = tile;
         this.content = content;
         this.date = date;
         this.readNum = readNum;
         this.commentNum = commentNum;
     }
+
     public BlogDetail(String tile, String content, String date, int readNum, int commentNum) {
         this.title = tile;
         this.content = content;
@@ -39,12 +37,12 @@ public class BlogDetail {
         this.commentNum = commentNum;
     }
 
-    public int getBlogID() {
-        return blogID;
+    public String getBlogUrl() {
+        return blogUrl;
     }
 
-    public void setBlogID(int blogID) {
-        this.blogID = blogID;
+    public void setBlogUrl(String blogUrl) {
+        this.blogUrl = blogUrl;
     }
 
     public String getTitle() {
@@ -92,7 +90,7 @@ public class BlogDetail {
     @Override
     public String toString() {
         return "BlogDetail{" +
-                "blogID=" + blogID +
+                "blogUrl='" + blogUrl + '\'' +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", date='" + date + '\'' +

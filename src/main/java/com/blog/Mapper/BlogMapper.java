@@ -14,7 +14,7 @@ public interface BlogMapper {
     List<Blog> getAllBlog();
     boolean savePersonalBlog(BlogDetail blogDetail);
     int getCount();
-    BlogDetail getPersonalBlog(int id);
+    BlogDetail getPersonalBlog(String blogUrl);
     List<BlogDetail>getAllPersonalBlog(@Param("startOffset") int startOffset, @Param("pageSize") int pageSize);
     List<BlogDetail>getBlogTitle();
 

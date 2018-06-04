@@ -210,7 +210,7 @@
             <script id="editor" type="text/javascript"></script>
             <input type="button" onclick="submitBlog()" value="提交">
         </form>
-        <button onclick="getAllHtml()">获得整个html的内容</button>
+        <button onclick="getContent()">获得内容</button>
         <button onclick="hasContent()">判断是否有内容</button>
     </div>
 
@@ -225,12 +225,14 @@
     function submitBlog() {
         var title = document.getElementById("BlogTitle").value;
         var content = UE.getEditor("editor").getContent();
+        alert(content);
+
 
         $.ajax({
             type: "post",//方法类型
             url: "/blog/save",//请求地址
             dataType: 'json',//数据类型
-            data: "title=" + title + "&content=" + content,//请求到接口的对象
+            data: {"title":title,"content":content},//请求到接口的对象
             success: function (data, textStatus) {
                 window.location.href = "/";
             },
@@ -242,8 +244,8 @@
 
     }
 
-    function getAllHtml() {
-        alert(UE.getEditor('editor').getAllHtml())
+    function getContent() {
+        alert(UE.getEditor('editor').getContent());
     }
 
     function hasContent() {

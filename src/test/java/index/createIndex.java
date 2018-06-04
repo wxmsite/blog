@@ -16,19 +16,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.wltea.analyzer.lucene.IKAnalyzer;
-
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-
-
 /**
  * author bebetter159
  * date  2018/5/31 22:30
@@ -60,7 +56,7 @@ public class createIndex {
             List<BlogDetail> list = new ArrayList<BlogDetail>();
             while (rs.next()) {
                 BlogDetail blogDetail = new BlogDetail();
-                blogDetail.setBlogID(rs.getInt("blog_id"));
+                blogDetail.setBlogUrl(rs.getString("blog_id"));
                 blogDetail.setTitle(rs.getString("title"));
                 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
                 sdf.setLenient(false);
@@ -76,7 +72,7 @@ public class createIndex {
                 //建立一个lucene文档
                 Document doc = new Document();
                 //得到url
-                int blogID = list.get(i).getBlogID();
+                String blogUrl = list.get(i).getBlogUrl();
                 //得到title
                 String title = list.get(i).getTitle();
                 String publishDate =list.get(i).getDate();
@@ -85,7 +81,7 @@ public class createIndex {
 
                 doc.add(new Field("title", title, TextField.TYPE_STORED));
 
-                doc.add(new Field("blogUrl", String.valueOf(blogID), StringField.TYPE_STORED));
+                doc.add(new Field("blogUrl", blogUrl, StringField.TYPE_STORED));
 
                 doc.add(new Field("date", publishDate, StringField.TYPE_STORED));
                 //添加主键至文档，不分词，不高亮。

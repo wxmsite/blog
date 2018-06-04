@@ -84,7 +84,7 @@
                     <div style="width: 100%">
                         <div>
                             <h5>
-                                <a href="/blog/detail/${blog.blogID}" target="_blank">${blog.title}</a>
+                                <a href="/blog/detail/${blog.blogUrl}" target="_blank">${blog.title}</a>
                             </h5>
                         </div>
                             <%--此处添加部分内容--%>

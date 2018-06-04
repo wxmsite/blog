@@ -17,7 +17,7 @@
     </insert>
     <select id="getAllPersonalBlog" resultType="BlogDetail">
         select
-            blog_id    blogID,
+            blog_url    blogUrl,
             title,
             content,
             date     date,
@@ -30,14 +30,14 @@
     </select>
     <select id="getPersonalBlog" resultType="BlogDetail">
         select
-            blog_id blogID,
+            blog_url blogUrl,
             title,
             content,
             date date,
             read_num readNum,
             comment_num commentNum
         from blog
-        where blog_id =#{blogID}
+        where blog_url =#{blogUrl}
     </select>
     <select id="getBlogTitle" resultType="BlogDetail">
         select
@@ -46,7 +46,7 @@
         from expert_blog_url
     </select>
     <select id="getCount" resultType="int">
-        select count(blog_id)
+        select count(blog_url)
         from blog
     </select>
 </mapper>

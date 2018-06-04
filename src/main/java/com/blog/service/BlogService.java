@@ -15,7 +15,7 @@ public interface BlogService {
     List<Blog> getAllExpertblog();
     boolean savePersonalBlog(BlogDetail blogDetail);
     int getCount();
-    BlogDetail getPersonalBlog(int id);
+    BlogDetail getPersonalBlog(String blogUrl);
     List<BlogDetail>getAllPersonalBlog(int pn,int pageSize);
     List<BlogDetail>getBlogTitle();
 

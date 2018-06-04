@@ -79,7 +79,7 @@ public class SearchServiceImpl implements SearchService {
 
         for (SolrDocument solrDocument : response.getResults()) {
             BlogDetail blog = new BlogDetail();
-            blog.setBlogID(Integer.parseInt(solrDocument.get(BLOG_URL_FIELD).toString()));
+            blog.setBlogUrl(solrDocument.get(BLOG_URL_FIELD).toString());
             blog.setTitle(solrDocument.get(BLOG_TITLE_FIELD).toString());
             blog.setReadNum(Integer.parseInt(solrDocument.get(BLOG_READ_FIELD).toString()));
             blog.setCommentNum(Integer.parseInt(solrDocument.get(BLOG_COMMENT_FIELD).toString()));
@@ -122,7 +122,7 @@ public class SearchServiceImpl implements SearchService {
                     Document doc = isearcher.doc(scoreDoc.doc);
                     System.out.println(doc.get("title"));
                     BlogDetail blogDetail = new BlogDetail();
-                    blogDetail.setBlogID(Integer.parseInt(doc.get("blogUrl")));
+                    blogDetail.setBlogUrl(doc.get("blogUrl"));
                     blogDetail.setTitle(doc.get("title"));
                     blogDetail.setDate(doc.get("date"));
                     blogDetail.setReadNum(Integer.parseInt(doc.get("readNum")));

@@ -31,6 +31,7 @@ public class BlogController {
     @RequestMapping("/save")
 
     public String save(@Param("title")String title,@Param("content")String content) {
+
         System.out.println(title+"   "+content);
         BlogDetail blogDetail=new BlogDetail(title,content,
                 new SimpleDateFormat("yyyy-MM-dd").format(new Date()),0,0);
@@ -39,11 +40,15 @@ public class BlogController {
     }
     @RequestMapping("/detail/{blogID}")
     public String detail(Model model, @PathVariable String blogID){
-        BlogDetail blogDetail=blogService.getPersonalBlog(Integer.parseInt(blogID));
+        BlogDetail blogDetail=blogService.getPersonalBlog(blogID);
         System.out.println(blogDetail.toString());
         model.addAttribute("blog",blogDetail);
 
         return "blogDetail";
+    }
+    @RequestMapping("/comment")
+    public void comment(){
+
     }
 
 }

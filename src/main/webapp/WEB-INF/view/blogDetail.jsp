@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link href="/css/comment.css" rel="stylesheet">
     <title>${blog.title}</title></head>
 <link href="/css/bootstrap3.min.css" rel="stylesheet">
 <link href="/css/docs.min.css" rel="stylesheet">
@@ -36,6 +37,18 @@
             </nav>
         </div>
     </div>
+    <div class="row">
+        <form role="form" id="commentForm" method="post">
+            <div class="form-group">
+                <textarea   rows="3" cols="160"></textarea>
+            </div>
+            <div class="form-group">
+                <input   type="submit"
+                       onclick="form=document.getElementById('commentForm');form.action='#'">
+            </div>
+        </form>
+
+    </div>
 </div>
 
 <footer class="bs-docs-footer">
@@ -44,7 +57,6 @@
             <li><a href="#">更多</a></li>
             <li><a href="#">关于</a></li>
         </ul>
-
     </div>
 </footer>
 </body>

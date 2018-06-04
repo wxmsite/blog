@@ -42,8 +42,8 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public BlogDetail getPersonalBlog(int id) {
-        return blogMapper.getPersonalBlog(id);
+    public BlogDetail getPersonalBlog(String blogUrl) {
+        return blogMapper.getPersonalBlog(blogUrl);
     }
 
 
