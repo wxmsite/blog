@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace：必须与对应的接口全类名一致  UserMapper.java
+    id ：必须与对应接口的某个对应的方法名一致即必须要和UserMapper.java接口中的方法同名。
+ -->
+<mapper namespace="com.blog.Mapper.SeckillMapper">
+    <update id="reduceNumber">
+        update seckill
+        set total_num=total_num-1
+        where total_num>0
+    </update>
+</mapper>

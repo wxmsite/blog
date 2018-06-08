@@ -2,10 +2,12 @@ package com.blog.JedisDao.impl;
 
 import com.blog.JedisDao.JedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
-@Service
+
+import java.util.Date;
+
+
 public class JedisClientSingle implements JedisClient {
 
     @Autowired
@@ -82,11 +84,26 @@ public class JedisClientSingle implements JedisClient {
         jedis.close();
         return result;
     }
-    public long getAndputPv(){
+
+    public long getAndputPv() {
         Jedis jedis = jedisPool.getResource();
-        long result=incr("count");
+        long result = incr("count");
         jedis.close();
         return result;
+    }
+
+    public long getSeckillTime() {
+        Jedis jedis = jedisPool.getResource();
+        setSeckillTime();
+        long time = Long.parseLong(get("seckillTime"));
+        jedis.close();
+        return time;
+    }
+
+    public void setSeckillTime() {
+        Jedis jedis = jedisPool.getResource();
+        Date date = new Date();
+        jedis.set("seckillTime", String.valueOf(date.getTime() + 5000));
     }
 
 }

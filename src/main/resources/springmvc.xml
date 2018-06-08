@@ -32,7 +32,8 @@
         <mvc:interceptor>
             <!--拦截后台页面的请求-->
             <mvc:mapping path="/Person/user"/>
-            <mvc:mapping path="/user/**"/>
+            <mvc:mapping path="/user/*"/>
+            <mvc:mapping path="/seckill/*"/>
             <bean class="com.blog.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>

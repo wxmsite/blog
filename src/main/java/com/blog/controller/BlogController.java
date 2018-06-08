@@ -41,7 +41,7 @@ public class BlogController {
     @RequestMapping("/detail/{blogID}")
     public String detail(Model model, @PathVariable String blogID){
         BlogDetail blogDetail=blogService.getPersonalBlog(blogID);
-        System.out.println(blogDetail.toString());
+
         model.addAttribute("blog",blogDetail);
 
         return "blogDetail";

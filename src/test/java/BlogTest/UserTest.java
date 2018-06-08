@@ -1,4 +1,4 @@
-package otherTest;
+package BlogTest;
 
 import com.blog.model.User;
 import com.blog.service.UserService;

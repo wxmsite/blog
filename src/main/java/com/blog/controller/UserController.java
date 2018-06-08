@@ -86,7 +86,6 @@ public class UserController {
 
     /**
      * 分页查询用户
-     *
      * @param pn
      * @param model
      * @return

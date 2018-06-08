@@ -20,10 +20,9 @@
     <context:property-placeholder location="classpath:redis.properties" ignore-unresolvable="true"/>
     <context:annotation-config/>
     <!--配置数据库连接池 -->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="jdbcUrl" value="${jdbc.url}"></property>
-        <property name="driverClass" value="${jdbc.driver}"></property>
-        <property name="user" value="${jdbc.username}"></property>
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
         <property name="password" value="${jdbc.password}"></property>
     </bean>
     <!-- 配置和mybatis的整合  -->
@@ -95,7 +94,7 @@
         </constructor-arg>
         <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
     </bean>
-    <bean id="jedisClientCluster" class="com.blog.JedisDao.impl.JedisClientCluster"></bean>
+    <bean id="blogDetail" class="com.blog.JedisDao.impl.JedisClientCluster"></bean>
 
 
     <!--事务 -->

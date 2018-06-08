@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     private PrivilegeMapper privilegeMapper;
 
     @Override
-    public Map<String, String> register(String username, String password) {
+    public Map<String, String> register(String username, String password,String email) {
         Map<String, String> map = new HashMap<String, String>();
         if (StringUtils.isBlank(username)) {
             map.put("msg", "用户名不能为空");
@@ -40,7 +40,8 @@ public class UserServiceImpl implements UserService {
         user = new User();
         user.setUserName(username);
         user.setSalt(UUID.randomUUID().toString().substring(0, 5));
-        user.setPassword(MD5Util.MD5(password + user.getSalt()));
+        user.setPassword(MD5Util.getMD5(password + user.getSalt()));
+        user.setEmail(email);
         insertUser(user);
         UserPrivilege userPrivilege = new UserPrivilege(getId(username), "CommonUser");
         privilegeMapper.addPrivilege(userPrivilege);
@@ -65,7 +66,7 @@ public class UserServiceImpl implements UserService {
             map.put("msg", "用户名不存在");
             return map;
         }
-        if (!MD5Util.MD5(password + user.getSalt()).equals(user.getPassword())) {
+        if (!MD5Util.getMD5(password + user.getSalt()).equals(user.getPassword())) {
             map.put("msg", "密码不正确");
             return map;
         }

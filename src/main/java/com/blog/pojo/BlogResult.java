@@ -27,7 +27,7 @@ public class BlogResult {
     }
 
     public static BlogResult wrong() {
-        return new BlogResult(200,"NO",null);
+        return new BlogResult(200, "NO", null);
 
     }
 

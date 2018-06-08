@@ -83,9 +83,9 @@
         </dependency>
         <!-- 数据库连接池 和驱动-->
         <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.5.2</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.6</version>
         </dependency>
         <!--Mysql -->
         <dependency>

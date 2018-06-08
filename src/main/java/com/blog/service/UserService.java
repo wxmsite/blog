@@ -12,7 +12,7 @@ import java.util.Map;
  */
 @Service
 public interface UserService {
-    Map<String, String> register(String username, String password);
+    Map<String, String> register(String username, String password,String email);
 
     Map<String, String> login(String username, String password);
 

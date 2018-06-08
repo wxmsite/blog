@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.JedisCluster;
-@Service
+
 public class JedisClientCluster implements JedisClient {
 
 	@Autowired

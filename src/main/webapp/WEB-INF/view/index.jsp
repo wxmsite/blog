@@ -16,7 +16,7 @@
     <!-- Custom styles for this template -->
     <link href="/css/blog-home.css" rel="stylesheet">
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/github.css" rel="stylesheet">
+
     <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
     <style type="text/css">
         .row-click-able {
@@ -30,7 +30,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Ming blog</a>
+        <a class="navbar-brand" href="/">Ming blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,14 +52,24 @@
                     <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item" id="sign">
-                    <svg height="36" class=" nav-link octicon octicon-mark-github " version="1.1"
-                         width="36"
-                         viewBox="0 0 16 16"
-                         aria-hidden="true"
+
+                    <svg t="1528124280666" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="36" height="36"
                          href="javasrcipt:void(0)" onclick="init()" id="signSvg">
-                        <path fill-rule="evenodd"
-                              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                        <path d="M512 832a318.432 318.432 0 0 1-215.648-84.256C351.264 729.984 443.008 704 509.952 704c68.064 0 162.048 26.976 216.608 44.704A318.24 318.24 0 0 1 512 832z m-160-324.672v-91.264A160.224 160.224 0 0 1 512 256c88.224 0 160 71.808 160 160.064v95.104c0 10.24-1.184 20.192-3.008 29.888l-0.928 4.576a159.296 159.296 0 0 1-22.528 53.28l-1.984 2.944a163.2 163.2 0 0 1-41.056 40.96l-2.016 1.376a159.136 159.136 0 0 1-88.48 26.816 159.232 159.232 0 0 1-88.672-26.88l-1.792-1.248a162.144 162.144 0 0 1-41.12-41.024l-2.048-3.04a159.264 159.264 0 0 1-22.432-53.184l-0.928-4.608a160.896 160.896 0 0 1-3.008-29.856v-3.84zM512 128C300.256 128 128 300.256 128 512s172.256 384 384 384 384-172.256 384-384S723.744 128 512 128z"
+                        ></path>
                     </svg>
+                    <%--<svg version="1.1"
+                         width="32" height="32" href="javasrcipt:void(0)" onclick="init()" id="signSvg">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M896 448h-128a32 32 0 0 0 0 64h128a32 32 0 0 0 0-64M896 320h-128a32 32 0 0 0 0 64h128a32 32 0 0 0 0-64M768 256h128a32 32 0 0 0 0-64h-128a32 32 0 0 0 0 64"
+                              p-id="2766"></path>
+                        <path d="M781.76 640c-5.12-2.272-97.216-42.56-198.72-62.752 11.808-9.632 22.144-20.928 31.104-33.248a174.88 174.88 0 0 0 33.792-103.2v-104.768A176.32 176.32 0 0 0 576 194.336 174.368 174.368 0 0 0 472.192 160c-96.928 0-175.776 78.976-175.776 176.032v104.768c0 56.544 26.88 106.816 68.384 139.072-96.48 20.832-181.344 57.824-185.536 59.712C150.016 651.328 128 684.192 128 716v131.712l1.728 5.024c9.504 27.904 35.136 46.624 63.776 46.624h572.992c33.28 0 60.832-24.864 64.96-56.96l0.544-126.4c0-15.232-5.184-30.72-13.664-44-9.088-14.272-21.952-26.016-36.576-32"
+                              p-id="2767"></path>
+                    </svg>--%>
                 </li>
             </ul>
         </div>
@@ -80,22 +90,22 @@
              </div>
             <hr style="height:1px;border:none;border-top:1px solid #ccc;"/>--%>
             <div class="row">
+
                 <c:forEach items="${allBlog.list}" var="blog">
                     <div style="width: 100%">
                         <div>
                             <h5>
-                                <a href="/blog/detail/${blog.blogUrl}" target="_blank">${blog.title}</a>
+                                <c:if test="${keyword==null}">
+                                    <a href="/blog/detail/${blog.blogUrl}" target="_blank">${blog.title}</a>
+                                </c:if>
+                                <c:if test="${keyword!=null}">
+                                    <a href="${blog.blogUrl}" target="_blank">${blog.title}</a>
+                                </c:if>
                             </h5>
                         </div>
-                            <%--此处添加部分内容--%>
-                            <%--<div>
-                            <h5>
-                                <a href="/blog/detail/${blog.blogUrl}"target="_blank">${blog.content}</a>
-                            </h5>
-                        </div>--%>
+
                         <div>
                             <p style="float: left ;margin-left:10px">${blog.date}</p>
-
                             <p style="float: left ;margin-left: 10px"> 阅读量:${blog.readNum}</p>
                             <p style="float: left; margin-left: 10px"> 评论量:${blog.commentNum}</p>
                         </div>

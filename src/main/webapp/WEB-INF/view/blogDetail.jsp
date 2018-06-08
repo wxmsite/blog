@@ -43,7 +43,7 @@
                 <textarea   rows="3" cols="160"></textarea>
             </div>
             <div class="form-group">
-                <input   type="submit"
+                <input   type="submit" value="提交评论"
                        onclick="form=document.getElementById('commentForm');form.action='#'">
             </div>
         </form>

@@ -9,6 +9,8 @@ import com.blog.service.ExpertUrlService;
 import com.blog.service.SearchService;
 import com.blog.utils.AuthUtil;
 import com.blog.utils.CookieUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +28,7 @@ import java.util.Map;
  */
 @Controller
 public class HomeController {
+    private final Logger logger = LoggerFactory.getLogger(HomeController.class);
     @Autowired
     JedisClientSingle jedisClientSingle;
     @Autowired
@@ -38,8 +41,15 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home(HttpServletRequest request, @RequestParam(value = "pn", defaultValue = "1") Integer pn, Model model) {
-        long pv = jedisClientSingle.getAndputPv();
-        model.addAttribute("countpv", pv);
+
+        long pv;
+        try {
+            pv = jedisClientSingle.getAndputPv();
+        } catch (Exception e) {
+            logger.error("连接Redis错误");
+            pv = 0;
+        }
+        model.addAttribute("countPv", pv);
         String sessionid = CookieUtil.getByName(request, "login");
         if (sessionid != null) {
             Map<String, Object> map = AuthUtil.decodeSession(sessionid);
