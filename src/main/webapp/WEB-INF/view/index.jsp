@@ -99,7 +99,7 @@
                                     <a href="/blog/detail/${blog.blogUrl}" target="_blank">${blog.title}</a>
                                 </c:if>
                                 <c:if test="${keyword!=null}">
-                                    <a href="${blog.blogUrl}" target="_blank">${blog.title}</a>
+                                    <a href="/blog/detail/${blog.blogUrl}" target="_blank">${blog.title}</a>
                                 </c:if>
                             </h5>
                         </div>
@@ -293,7 +293,7 @@
                             </span>
                 </a>
 
-                <a target="_blank" href="https://github.com/qaz123456789">
+                <a target="_blank" href="https://github.com/wxmsite">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>

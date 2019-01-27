@@ -54,7 +54,7 @@ public class createIndex {
             Connection conn = dataSource.getConnection();
             Statement stmt = null;
             ResultSet rs = null;
-            String sql = "select * from expert_blog_url";
+            String sql = "select * from blog";
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
 
@@ -66,7 +66,7 @@ public class createIndex {
                 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
                 sdf.setLenient(false);
 
-                blogDetail.setDate(rs.getString("time"));
+                blogDetail.setDate(rs.getString("date"));
                 blogDetail.setCommentNum(rs.getInt("comment_num"));
                 blogDetail.setReadNum(rs.getInt("read_num"));
 

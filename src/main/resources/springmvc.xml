@@ -22,11 +22,11 @@
 
     <!--1： mvc:annotation-driven默认创建了 RequestMappingHandlerMapping和  RequestMappingHandlerAdapter对象
     提供对JSon数据格式的支持-->
-
+    <mvc:annotation-driven/>
     <!-- 2.配置静态资源访问 -->
     <mvc:default-servlet-handler/>
 
-    <mvc:annotation-driven/>
+
     <mvc:interceptors>
         <!-- 配置登陆拦截器 -->
         <mvc:interceptor>

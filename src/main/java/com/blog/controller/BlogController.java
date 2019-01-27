@@ -32,7 +32,7 @@ public class BlogController {
 
     public String save(@Param("title")String title,@Param("content")String content) {
 
-        System.out.println(title+"   "+content);
+        //System.out.println(title+"   "+content);
         BlogDetail blogDetail=new BlogDetail(title,content,
                 new SimpleDateFormat("yyyy-MM-dd").format(new Date()),0,0);
         blogService.savePersonalBlog(blogDetail);

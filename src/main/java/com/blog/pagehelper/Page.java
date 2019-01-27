@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  * 主要是因为使用PageHelper对solr数据分页时遇到了bug,所以就决定自己写一个分页
- *
  * @param <T>
  */
 public class Page<T> {

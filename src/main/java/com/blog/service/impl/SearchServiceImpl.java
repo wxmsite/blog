@@ -27,7 +27,6 @@ import org.wltea.analyzer.lucene.IKAnalyzer;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,7 +78,6 @@ public class SearchServiceImpl implements SearchService {
 
         for (SolrDocument solrDocument : response.getResults()) {
             BlogDetail blog = new BlogDetail();
-            blog.setBlogUrl(solrDocument.get(BLOG_URL_FIELD).toString());
             blog.setTitle(solrDocument.get(BLOG_TITLE_FIELD).toString());
             blog.setReadNum(Integer.parseInt(solrDocument.get(BLOG_READ_FIELD).toString()));
             blog.setCommentNum(Integer.parseInt(solrDocument.get(BLOG_COMMENT_FIELD).toString()));
@@ -120,11 +118,11 @@ public class SearchServiceImpl implements SearchService {
                 scores = hits.scoreDocs;
                 for (ScoreDoc scoreDoc : scores) {
                     Document doc = isearcher.doc(scoreDoc.doc);
-                    System.out.println(doc.get("title"));
+
                     BlogDetail blogDetail = new BlogDetail();
-                    blogDetail.setBlogUrl(doc.get("blogUrl"));
                     blogDetail.setTitle(doc.get("title"));
                     blogDetail.setDate(doc.get("date"));
+                    blogDetail.setBlogUrl(doc.get("blogUrl"));
                     blogDetail.setReadNum(Integer.parseInt(doc.get("readNum")));
                     blogDetail.setCommentNum(Integer.parseInt(doc.get("commentNum")));
                     blogDetails.add(blogDetail);

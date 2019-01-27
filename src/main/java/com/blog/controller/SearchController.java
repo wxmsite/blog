@@ -1,5 +1,6 @@
 package com.blog.controller;
 
+import com.blog.JedisDao.impl.JedisClientSingle;
 import com.blog.model.BlogDetail;
 import com.blog.pagehelper.Page;
 import com.blog.service.BlogService;
@@ -22,6 +23,8 @@ public class SearchController {
     SearchService searchService;
     @Autowired
     BlogService blogService;
+    @Autowired
+    JedisClientSingle jedisClientSingle;
 
     @RequestMapping("/{categories}")
     public void searchByCategories() {
@@ -33,14 +36,16 @@ public class SearchController {
                          @RequestParam(value = "pn", defaultValue = "1") Integer pn) {
         List<BlogDetail> blogList = searchService.searchBlogLucene(keyword ,pn);
         for(BlogDetail blogDetail:blogList){
-            System.out.println(blogDetail.getTitle());
+            System.out.println(blogDetail.toString());
         }
         long count=searchService.getCount();
-        System.out.println(count);
+
         Page page=new Page(blogList,pn,count,8);
         model.addAttribute("allBlog",page);
         model.addAttribute("keyword", keyword);
         model.addAttribute("count",count);
+        long pv=jedisClientSingle.getAndputPv();
+        model.addAttribute("countPv",pv);
       /*  PageHelper.startPage(pn, 3);
         List<Blog> blogList = searchService.searchBlog(keyword,pn);
         System.out.println(blogList.size());
