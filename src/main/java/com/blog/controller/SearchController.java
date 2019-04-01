@@ -1,6 +1,7 @@
 package com.blog.controller;
 
 import com.blog.JedisDao.impl.JedisClientSingle;
+import com.blog.Mapper.SearchMapper;
 import com.blog.model.BlogDetail;
 import com.blog.pagehelper.Page;
 import com.blog.service.BlogService;
@@ -8,8 +9,10 @@ import com.blog.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.List;
 
 /**
@@ -25,27 +28,38 @@ public class SearchController {
     BlogService blogService;
     @Autowired
     JedisClientSingle jedisClientSingle;
+    @Autowired
+    SearchMapper searchMapper;
 
-    @RequestMapping("/{categories}")
-    public void searchByCategories() {
-
+    @RequestMapping("/search/c")
+    public String searchByCategories(Model model, @RequestParam("category") String c,
+                                     @RequestParam(value = "pn", defaultValue = "1") Integer pn) {
+        List<BlogDetail> blogDetails = searchMapper.searchByCategories(c);
+        for(BlogDetail blogDetail:blogDetails){
+            System.out.println(blogDetail.toString()+"12233");
+        }
+        long count = searchService.getCount();
+        Page page = new Page(blogDetails, pn, count, 8);
+        model.addAttribute("allBlog", page);
+        model.addAttribute("count", count);
+        long pv = jedisClientSingle.getAndputPv();
+        model.addAttribute("countPv", pv);
+        return "index";
     }
 
-    @RequestMapping("/search")
+    @RequestMapping(value = "/search")
     public String search(Model model, @RequestParam("keyword") String keyword,
                          @RequestParam(value = "pn", defaultValue = "1") Integer pn) {
-        List<BlogDetail> blogList = searchService.searchBlogLucene(keyword ,pn);
-        for(BlogDetail blogDetail:blogList){
-            System.out.println(blogDetail.toString());
-        }
-        long count=searchService.getCount();
+        List<BlogDetail> blogList = searchService.searchBlogLucene(keyword, pn);
 
-        Page page=new Page(blogList,pn,count,8);
-        model.addAttribute("allBlog",page);
+        long count = searchService.getCount();
+
+        Page page = new Page(blogList, pn, count, 8);
+        model.addAttribute("allBlog", page);
         model.addAttribute("keyword", keyword);
-        model.addAttribute("count",count);
-        long pv=jedisClientSingle.getAndputPv();
-        model.addAttribute("countPv",pv);
+        model.addAttribute("count", count);
+        long pv = jedisClientSingle.getAndputPv();
+        model.addAttribute("countPv", pv);
       /*  PageHelper.startPage(pn, 3);
         List<Blog> blogList = searchService.searchBlog(keyword,pn);
         System.out.println(blogList.size());

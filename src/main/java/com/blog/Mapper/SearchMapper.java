@@ -1,6 +1,10 @@
 package com.blog.Mapper;
 
+import com.blog.model.BlogDetail;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * author bebetter159
@@ -8,5 +12,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface SearchMapper {
-    void searchByCategories(String category);
+    List<BlogDetail> searchByCategories(@Param("category")String category);
 }

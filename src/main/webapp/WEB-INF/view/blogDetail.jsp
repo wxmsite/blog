@@ -1,4 +1,4 @@
-<%--
+ <%--
   Created by IntelliJ IDEA.
   User: www
   Date: 2018/6/2
@@ -37,17 +37,17 @@
             </nav>
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="comment">
         <form role="form" id="commentForm" method="post">
             <div class="form-group">
-                <textarea   rows="3" cols="160"></textarea>
+                <label>
+                    <textarea   rows="3" cols="160"></textarea>
+                </label>
             </div>
             <div class="form-group">
-                <input   type="submit" value="提交评论"
-                       onclick="form=document.getElementById('commentForm');form.action='#'">
+                <input type="button" id="refresh" value="局部刷新" />
             </div>
         </form>
-
     </div>
 </div>
 
@@ -60,4 +60,37 @@
     </div>
 </footer>
 </body>
+
+<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        <!--直接载入页面-->
+        var comment = $('#comment');
+        $('#refresh').click(function() {
+            comment.children().remove();
+            comment.load('comment.html #comment');//用法参考jQuery的load函数
+        });
+
+        /*<!--与服务器进行交互-->
+        var comment = $('#comment');
+        $('#refresh').click(function() {
+            dynamicData('comment');
+        });
+
+        function dynamicData(param) {
+            comment.children().remove();
+
+            $.ajax({
+                type : 'POST',
+                url : '/comment_servlet',//java中的Servlet路径
+                data : 'page=' + param,
+                success : function(result) {//回调函数,result与上面load参数的类似，可以是jsp文件的路径
+                    comment.load(result);
+                }
+            });
+        }*/
+
+    });
+</script>
+
 </html>
