@@ -16,7 +16,7 @@ import us.codecraft.webmagic.processor.PageProcessor;
 import java.util.List;
 /**
  * author bebetter159
- * date  时间未详
+
  */
 /**
  * 这个类其实可以和lBlogTitleSpider合并，由于初期想先爬博客url所以将其拆分开了

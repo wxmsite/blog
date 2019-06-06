@@ -4,7 +4,6 @@ import java.util.Map;
 import static com.blog.utils.JavaWebToken.verifyJavaWebToken;
 public class AuthUtil {
 
-
     /**
      * session解密
      */

@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  * author bebetter159
- * date  时间未详
+
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring/applicationContext.xml")

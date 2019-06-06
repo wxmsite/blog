@@ -1,11 +1,9 @@
 package com.blog.model;
 /**
  * author bebetter159
- * date  时间未详
- */
-/**
  * 保存每位博客专家的信息
  */
+
 public class ExpertUrl {
     private int eid;
     private String blogName;

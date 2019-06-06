@@ -5,7 +5,6 @@ import com.blog.model.UserPrivilege;
 import org.apache.ibatis.annotations.Mapper;
 /**
  * author bebetter159
- * date  时间未详
  */
 @Mapper
 public interface PrivilegeMapper {

@@ -2,7 +2,6 @@ package com.blog.pojo;
 
 public class BlogResult {
 
-
     //响应业务状态
     private int status;
     //相应消息
